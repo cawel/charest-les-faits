@@ -1,4 +1,5 @@
 class ExamplesController < ApplicationController
+
   # GET /examples
   # GET /examples.json
   def index

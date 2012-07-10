@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
      @example = Example.first(:conditions => [ "id >= ?", random_id])
      @example = Example.new({:headline => 'Please create an example'}) if @example.nil?
   end
+
 end

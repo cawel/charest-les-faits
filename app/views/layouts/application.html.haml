@@ -6,6 +6,10 @@
   = javascript_include_tag "application"
   = csrf_meta_tags
 
+  <!--[if IE]>
+  :css
+    .clearfix { zoom: 1; }
+  <![endif]-->
 %body
   %div{class:'container'}
     %h1 Charest la honte
