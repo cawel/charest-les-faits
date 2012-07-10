@@ -1,4 +1,4 @@
-if defined? Reason
+if Reason.table_exists?
   Reason.delete_all
   Reason.new({:label => 'corruption'}).save!
   Reason.new({:label => 'collusion'}).save!
