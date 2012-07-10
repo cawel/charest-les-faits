@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Headline:
+  = @example.headline
+%p
+  %b Link:
+  = @example.link
+%p
+  %b Excerpt:
+  = @example.excerpt
+
+= link_to 'Edit', edit_example_path(@example)
+\|
+= link_to 'Back', examples_path

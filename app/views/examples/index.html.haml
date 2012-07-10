@@ -1,0 +1,23 @@
+%h1 Listing examples
+
+%table
+  %tr
+    %th Headline
+    %th Link
+    %th Excerpt
+    %th
+    %th
+    %th
+
+  - @examples.each do |example|
+    %tr
+      %td= example.headline
+      %td= example.link
+      %td= example.excerpt
+      %td= link_to 'Show', example
+      %td= link_to 'Edit', edit_example_path(example)
+      %td= link_to 'Destroy', example, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Example', new_example_path
