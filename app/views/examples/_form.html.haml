@@ -18,7 +18,7 @@
   .field
     = f.label :reasons, 'Raisons de la honte'
     - Reason.all.each do |reason|
-      != "<input id='#{reason.label}' type='checkbox' name='example[reasons][]' value='#{reason.id}'>"
+      != "<input id='example_#{reason.label}' type='checkbox' name='example[reasons][]' value='#{reason.id}'>"
       = f.label reason.label, I18n.t(reason.label)
 
   .actions
