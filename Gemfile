@@ -9,7 +9,6 @@ gem 'pg'
 
 gem 'thin'
 gem "haml-rails"
-gem 'rails-translate-routes'
 
 # Gems used only for assets and not required
 # in production environments by default.
