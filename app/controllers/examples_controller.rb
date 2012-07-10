@@ -41,6 +41,8 @@ class ExamplesController < ApplicationController
   # POST /examples
   # POST /examples.json
   def create
+    puts "reasons = #{params[:example][:reasons]}"
+    params[:example][:reasons] = params[:example][:reasons].map{|id| Reason.find(id)}
     @example = Example.new(params[:example])
 
     respond_to do |format|

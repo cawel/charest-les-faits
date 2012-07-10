@@ -15,6 +15,12 @@
   .field
     = f.label :link, 'Lien'
     = f.text_field :link
+  .field
+    = f.label :reasons, 'Raisons de la honte'
+    - Reason.all.each do |reason|
+      != "<input id='#{reason.label}' type='checkbox' name='example[reasons][]' value='#{reason.id}'>"
+      = f.label reason.label, I18n.t(reason.label)
+
   .actions
     %label
     = f.submit 'Soumettre'
