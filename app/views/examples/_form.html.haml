@@ -1,26 +1,26 @@
-= form_for @example do |f|
-  -if @example.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@example.errors.count, "erreur")} se sont produites:"
-      %ul
-        - @example.errors.full_messages.each do |msg|
-          %li= msg
+= simple_form_for @example, :html => {:class => "form-horizontal"} do |f|
 
-  .field
-    = f.label :headline, 'Résumé'
-    = f.text_area :headline
-  .field
-    = f.label :excerpt, 'Extrait'
-    = f.text_area :excerpt
-  .field
-    = f.label :link, 'Lien'
-    = f.text_field :link
-  .field
-    = f.label :reasons, 'Raisons de la honte'
-    - Reason.all.each do |reason|
-      != "<input id='example_#{reason.label}' type='checkbox' name='example[reasons][]' value='#{reason.id}'>"
-      = f.label reason.label, I18n.t(reason.label)
+  .control-group
+    = f.label :headline, :class => "control-label"
+    .controls
+      = f.input_field :headline
 
-  .actions
-    %label
-    = f.submit 'Soumettre'
+  .control-group
+    = f.label :excerpt, :class => "control-label"
+    .controls
+      = f.input_field :excerpt, :rows => 10
+
+  .control-group
+    = f.label :link, :class => "control-label"
+    .controls
+      = f.input_field :link
+
+  .control-group
+    = f.label :reasons, 'Raisons de la honte', :class => "control-label"
+    .controls
+      - Reason.all.each do |reason|
+        != "<input id='example_#{reason.label}' type='checkbox' name='example[reasons][]' value='#{reason.id}'>"
+        = f.label reason.label, I18n.t(reason.label)
+
+  .form-actions
+    = f.submit :soumettre, :class => 'btn' 

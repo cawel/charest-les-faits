@@ -7,3 +7,8 @@ fr:
   activerecord:
     models:
       example: exemple
+    attributes:
+      example:
+        headline: "Résumé"
+        excerpt: "Extrait"
+        link: "Lien"
