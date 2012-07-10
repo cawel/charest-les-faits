@@ -12,6 +12,13 @@
  *= require_tree .
  */
 
+label, p, input, a {font-size: 150%;}
+input[type='text'], textarea {padding:5px; font-size:120%;}
+
+h1 {margin-bottom:2em;}
+
+label {font-weight:bold; width:8em; display:inline-block; vertical-align:top;}
+
 .header img {float:left; margin-right:1em; border:2px solid #ccc;}
 .header {display:table-cell; vertical-align:middle;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -19,3 +26,7 @@
 ul.footer {list-style-type:none; padding:0; margin:0;}
 ul.footer li {margin:0; padding:0 2em; display:inline; border-left:1px solid #444;}
 ul.footer li:first-child {border-style:none;}
+
+textarea {width:30em;}
+textarea#example_headline {height:4em;}
+input#example_link {width:30em;}
