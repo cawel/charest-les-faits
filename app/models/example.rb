@@ -1,4 +1,6 @@
 class Example < ActiveRecord::Base
+  scope :for_reason, lambda {|r| joins(:reasons).where("examples_reasons.reason_id = ?", r)}
+
   attr_accessible :excerpt, :headline, :link, :reasons, :reason_ids
   has_and_belongs_to_many :reasons
 

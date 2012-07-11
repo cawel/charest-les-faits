@@ -15,6 +15,8 @@ p {font-size:120% !important; line-height:1.7em !important;}
 .header-container {margin: auto; margin-bottom:3em; text-align: left; width: 500px;}
 .header-container h1 {margin-bottom:0.5em;}
 
+.filter-notice {text-align:center; font-size:150% !important; width:900px; margin:auto; margin-bottom:1em; background-color:#eee; padding:0.5em 1em;}
+
 h1.nouveau-example {margin-left:220px;}
 
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}

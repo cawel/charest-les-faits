@@ -1,11 +1,30 @@
 # encoding: utf-8
 
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
+
   before_filter :set_locale
   protect_from_forgery
 
-  def index
+  def reasons
+    all_examples = Example.all
+    @reasons_with_count = Reason.all.map {|r| [r, all_examples.select{|e| e.reasons.include? r}.size] }
+  end
+
+  def clear_by_reason
+    session[:filter_by_reason] = nil
+    clear_history
     self.next
+  end
+
+  def by_reason
+    session[:filter_by_reason] = params[:id]
+    clear_history
+    self.next
+  end
+
+  def index
+    self.clear_by_reason
   end
 
   def next
@@ -40,15 +59,21 @@ class ApplicationController < ActionController::Base
   end
 
   def fetch_from_history
+    logger.info "fetching example id##{history[position]} from history #{history}"
     example = Example.find_by_id(history[position])
     history.delete_at position if example.nil?
     example
   end
 
   def sample
-    example = Example.all.sample if history.empty?
-    example = Example.find(:first, :conditions => ['id not in (?)', history], :order => 'RANDOM()') if example.nil?
-    example = Example.all.sample if example.nil?
+    filter = filtering_by_reason ? Example.for_reason(session[:filter_by_reason]) : Example
+
+    example = filter.all.sample if history.empty?
+    example = filter.find(:first, :conditions => ['examples.id not in (?)', history], :order => 'RANDOM()') if example.nil?
+    example = filter.all.sample if example.nil?
+
+    logger.info "sampled out example #{example}"
+    logger.error "could not find any examples. Are there any examples in the database?" if example.nil?
     example
   end
 
@@ -66,6 +91,11 @@ class ApplicationController < ActionController::Base
 
   def history
     session[:history] ||= []
+  end
+
+  def clear_history
+    history.clear
+    session[:position] = 0
   end
 
   private
