@@ -1,9 +1,4 @@
 fr:
-  corruption: Corruption
-  collusion: Collusion
-  transparence: Manque de transparence
-  vision: Manque de vision
-  gestion: Mauvaise gestion
   activerecord:
     models:
       example: exemple

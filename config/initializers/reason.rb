@@ -1,8 +1,8 @@
 if Reason.table_exists?
   Reason.delete_all
-  Reason.new({:label => 'corruption'}).save!
-  Reason.new({:label => 'collusion'}).save!
-  Reason.new({:label => 'transparence'}).save!
-  Reason.new({:label => 'vision'}).save!
-  Reason.new({:label => 'gestion'}).save!
+  Reason.new({:label => 'Corruption'}).save!
+  Reason.new({:label => 'Collusion'}).save!
+  Reason.new({:label => 'Manque de transparence'}).save!
+  Reason.new({:label => 'Manque de vision'}).save!
+  Reason.new({:label => 'Mauvaise gestion'}).save!
 end

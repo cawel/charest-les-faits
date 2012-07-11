@@ -21,7 +21,7 @@
   .control-group
     = f.label :reasons, 'Raisons de la honte', :class => "control-label"
     .controls
-      = f.collection_check_boxes :reason_ids, Reason.all, :id, lambda {|r| I18n.t r.label}
+      = f.collection_check_boxes :reason_ids, Reason.all, :id, lambda {|r| r.label}
 
   .form-actions
     = f.submit :Soumettre, :class => 'btn' 

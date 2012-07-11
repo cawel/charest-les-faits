@@ -3,11 +3,11 @@
 require 'factory_girl'
 
 Reason.delete_all
-r1 = FactoryGirl.create(:reason, :label => 'corruption')
-r2 = FactoryGirl.create(:reason, :label => 'collusion')
-r3 = FactoryGirl.create(:reason, :label => 'transparence')
-r4 = FactoryGirl.create(:reason, :label => 'vision')
-r5 = FactoryGirl.create(:reason, :label => 'gestion')
+r1 = FactoryGirl.create(:reason, :label => 'Corruption')
+r2 = FactoryGirl.create(:reason, :label => 'Collusion')
+r3 = FactoryGirl.create(:reason, :label => 'Manque de transparence')
+r4 = FactoryGirl.create(:reason, :label => 'Manque de vision')
+r5 = FactoryGirl.create(:reason, :label => 'Mauvaise gestion')
 
 Example.delete_all
 FactoryGirl.create(:example, :headline => "Charest est accusé de collusion.", :reasons => [r1, r2])

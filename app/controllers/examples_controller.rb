@@ -24,7 +24,7 @@ class ExamplesController < ApplicationController
     @example = Example.new(params[:example])
 
     if @example.save
-      redirect_to examples_path, notice: 'Exemple créé avec succès.'
+      redirect_to example_path(@example), notice: 'Merci de votre contribution! Vous pourrez voir votre exemple aussitôt qu\'il sera approuvé.'
     else
       render action: "new"
     end

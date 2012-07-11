@@ -3,7 +3,7 @@
 
 .row
   - if filtering_by_reason
-    %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{I18n.t(Reason.find(session[:filter_by_reason]).label).downcase}</b>. #{link_to 'Cliquez ici', clear_by_reason_path} pour revenir à tous les exemples."
+    %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Cliquez ici', clear_by_reason_path} pour revenir à tous les exemples."
 
 .span1
   = link_to image_tag('left-arrow.png', :alt => 'reculer'), previous_path, :class => 'arrow-link'
@@ -20,7 +20,7 @@
       - if !@example.reasons.empty?
         .section
           %label Raisons de la honte
-          != @example.reasons.map { |reason| link_to(I18n.t(reason.label).downcase, by_reason_path(reason)) }.join(", ")
+          != @example.reasons.map { |reason| link_to(reason.label.downcase, by_reason_path(reason)) }.join(", ")
 
 .span1
   = link_to image_tag('right-arrow.png', :alt => 'avancer'), next_path, :class => 'arrow-link', :alt => 'avancer'
