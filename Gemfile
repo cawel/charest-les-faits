@@ -25,6 +25,9 @@ end
 gem 'jquery-rails'
 gem 'simple_form'
 
+# require for seeding
+gem 'factory_girl_rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
