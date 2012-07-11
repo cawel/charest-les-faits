@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class ExamplesController < ApplicationController
 
   def index
@@ -17,12 +19,10 @@ class ExamplesController < ApplicationController
   end
 
   def create
-    # puts "reasons = #{params[:example][:reasons]}"
-    # params[:example][:reasons] = params[:example][:reasons].map{|id| Reason.find(id)}
     @example = Example.new(params[:example])
 
     if @example.save
-      redirect_to examples_path, notice: 'Example was successfully created.'
+      redirect_to examples_path, notice: 'Exemple créé avec succès.'
     else
       render action: "new"
     end
@@ -32,7 +32,7 @@ class ExamplesController < ApplicationController
     @example = Example.find(params[:id])
 
     if @example.update_attributes(params[:example])
-      redirect_to @example, notice: 'Example was successfully updated.'
+      redirect_to @example, notice: 'Exemple modifié avec succès.'
     else
       render action: "edit"
     end
