@@ -8,12 +8,14 @@
     .excerpt= @example.excerpt
 
     .example-info
-      %label{:class => 'control-label'} Référence
-      = link_to @example.link, @example.link
+      .section
+        %label{:class => 'control-label'} Référence
+        = link_to @example.link.sub(/^http:\/\//,'').sub(/[w.]*/,''), @example.link
 
-      %label Raisons de la honte
-      - @example.reasons.each do |reason|
-        %p= I18n.t reason.label
+      .section
+        %label Raisons de la honte
+        - @example.reasons.each do |reason|
+          %p= I18n.t reason.label
 
 .span1
   = link_to image_tag('right-arrow.png'), next_path, :class => 'arrow-link'

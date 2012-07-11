@@ -14,24 +14,27 @@
 
 .arrow-link:hover {background-color:transparent;}
 .headline {color:red; font-size:300%; margin:1em 0; line-height:1em;}
-.excerpt {font-style:italic;}
+.excerpt {font-style:italic; font-size:140%;}
 .container h1 {margin-bottom:1em;}
+h1.nouveau-example {margin-left:160px; margin-top:1em;}
 
 .header img {float:left; margin-right:1em; border:2px solid #ccc;}
 .header {display:table-cell; vertical-align:middle;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-hr {clear:both;}
-ul.footer {list-style-type:none; padding:0; margin:0; text-align: center; clear:both;}
-ul.footer li {margin:0; padding:0 1em; display:inline; border-left:1px solid #444;}
-ul.footer li:first-child {border-style:none;}
+.footer hr{clear:both; border-top-color:#ccc;}
+.footer ul {font-size:130%; list-style-type:none; padding:0; margin:0; text-align: center; clear:both;}
+.footer ul li {margin:0; padding:0 1em; display:inline; border-left:1px solid #888;}
+.footer ul li:first-child {border-style:none;}
 
-.controls textarea {width:47em;}
-.controls input#example_headline {width:40em;}
-.controls input#example_link {width:40em;}
+.controls textarea, .controls input#example_headline, .controls input#example_link {width:40em;}
+.controls * {vertical-align:middle;}
 
+input.btn, button.btn, .control-label, .collection_check_boxes {font-size:120%;}
+.control-group {line-height:2em;}
 .control-group .controls span input {margin:0;}
 .control-group .controls span {display:block;}
 .control-group .controls span label {display:inline; margin-left:1em;}
-.example-info label {font-weight:bold;}
+.example-info label {font-weight:bold; display:inline-block; width:12em; font-size:110%;}
+.example-info .section {font-size:130%; line-height:2.0em;}
 .example-info {margin-top:2em;}
