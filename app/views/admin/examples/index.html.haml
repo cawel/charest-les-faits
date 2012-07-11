@@ -4,7 +4,7 @@
       %th ID
       %th Résumé
       %th Extrait
-      %th Actions
+      %th
 
   %tbody
     - @examples.each do |example|
@@ -12,6 +12,6 @@
         %td= example.id
         %td= example.headline
         %td= example.excerpt
-        %td
+        %td(white-space="nowrap" nowrap="true")
           = link_to image_tag('icons/pencil.png'), edit_admin_example_path(example)
           = link_to image_tag('icons/cross.png'), admin_example_path(example), :method => :delete, :confirm => "Etes-vous certain?"
