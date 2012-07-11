@@ -3,20 +3,23 @@
  *= require_tree .
  */
 
+*, div, p, td, body {font-family: Marmelad, Ubuntu, Verdana, sans-serif;}
 .arrow-link:hover {background-color:transparent;}
-.arrow-link img:hover {background-color:#eee; border:1px solid #ddd;}
-.headline {color:red; font-size:300%; margin:1em 0 1.5em 0; line-height:1.2em;}
+.arrow-link img[alt='Left-arrow'] {border-right:1px solid #aaa;}
+.arrow-link img[alt='Right-arrow'] {border-left:1px solid #aaa;}
+.arrow-link img:hover {background-color:#eee;}
+.headline {font-family:Squada One, Verdana; color:red; font-size:320%; margin:0 0 1.5em 0; line-height:1.2em;}
 .excerpt {font-style:italic; font-size:140%;}
 .container h1 {margin-bottom:1em;}
 body {padding-top:1em;}
-.header-container {margin: auto; margin-bottom:2em; text-align: left; width: 500px;}
+.header-container {margin: auto; margin-bottom:3em; text-align: left; width: 500px;}
 .header-container h1 {margin-bottom:0.5em;}
 
 h1.nouveau-example {margin-left:220px;}
 
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}
 .header .name-and-title {margin-top:1.8em;}
-.header-container h1 {letter-spacing:0.15em;}
+.header-container h1 {letter-spacing:0.10em;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .footer hr{clear:both; border-top-color:#ccc;}
