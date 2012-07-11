@@ -1,1 +1,14 @@
-admin view for examples index
+%table
+  %thead
+    %tr
+      %th ID
+      %th Résumé
+      %th Extrait
+
+  %tbody
+    - @examples.each do |example|
+      %tr
+        %td= example.id
+        %td= example.headline
+        %td= example.excerpt
+
