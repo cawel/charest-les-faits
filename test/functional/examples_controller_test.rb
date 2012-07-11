@@ -21,7 +21,7 @@ class ExamplesControllerTest < ActionController::TestCase
       post :create, example: { excerpt: @example.excerpt, headline: @example.headline, link: @example.link }
     end
 
-    assert_redirected_to example_path(assigns(:example))
+    assert_redirected_to examples_path
   end
 
   test "should show example" do

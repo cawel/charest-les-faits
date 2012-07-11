@@ -12,12 +12,7 @@
  *= require_tree .
  */
 
-label, p, input, a {font-size: 100%;}
-input[type='text'], textarea {padding:5px; font-size:120%;}
-
-h1 {margin-bottom:2em;}
-
-.field label {font-weight:bold; width:8em; display:inline-block; vertical-align:top;}
+.container h1 {margin-bottom:1em;}
 
 .header img {float:left; margin-right:1em; border:2px solid #ccc;}
 .header {display:table-cell; vertical-align:middle;}
@@ -27,6 +22,10 @@ ul.footer {list-style-type:none; padding:0; margin:0; text-align: center}
 ul.footer li {margin:0; padding:0 1em; display:inline; border-left:1px solid #444;}
 ul.footer li:first-child {border-style:none;}
 
-textarea {width:30em;}
-textarea#example_headline {height:4em;}
-input#example_link {width:30em;}
+.controls textarea {width:47em;}
+.controls input#example_headline {width:40em;}
+.controls input#example_link {width:40em;}
+
+.control-group .controls span input {margin:0;}
+.control-group .controls span {display:block;}
+.control-group .controls span label {display:inline; margin-left:1em;}
