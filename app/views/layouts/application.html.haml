@@ -12,8 +12,8 @@
   <![endif]-->
 %body
   %div{:class => "container"}
-    = notice
-    = alert
+    = render "flash_messages"
+
     = yield
 
     = render "footer"
