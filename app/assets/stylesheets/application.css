@@ -1,25 +1,22 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
  *= require_tree .
  */
 
 .arrow-link:hover {background-color:transparent;}
-.headline {color:red; font-size:300%; margin:1em 0; line-height:1em;}
+.arrow-link img:hover {background-color:#eee; border:1px solid #ddd;}
+.headline {color:red; font-size:300%; margin:1em 0 1.5em 0; line-height:1.2em;}
 .excerpt {font-style:italic; font-size:140%;}
 .container h1 {margin-bottom:1em;}
-h1.nouveau-example {margin-left:160px; margin-top:1em;}
+body {padding-top:1em;}
+.header-container {margin: auto; margin-bottom:2em; text-align: left; width: 500px;}
+.header-container h1 {margin-bottom:0.5em;}
 
-.header img {float:left; margin-right:1em; border:2px solid #ccc;}
-.header {display:table-cell; vertical-align:middle;}
+h1.nouveau-example {margin-left:220px;}
+
+.header img {float:left; margin-right:2em; border:3px solid #ccc;}
+.header .name-and-title {margin-top:1.8em;}
+.header-container h1 {letter-spacing:0.15em;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .footer hr{clear:both; border-top-color:#ccc;}
@@ -32,9 +29,12 @@ h1.nouveau-example {margin-left:160px; margin-top:1em;}
 
 input.btn, button.btn, .control-label, .collection_check_boxes {font-size:120%;}
 .control-group {line-height:2em;}
+.form-horizontal label.control-label {width:200px;}
+.form-horizontal div.controls {margin-left:220px;}
+.form-horizontal div.form-actions {padding-left:220px;}
 .control-group .controls span input {margin:0;}
 .control-group .controls span {display:block;}
 .control-group .controls span label {display:inline; margin-left:1em;}
 .example-info label {font-weight:bold; display:inline-block; width:12em; font-size:110%;}
 .example-info .section {font-size:130%; line-height:2.0em;}
-.example-info {margin-top:2em;}
+.example-info {margin:2em 0;}
