@@ -13,10 +13,10 @@
         %label{:class => 'control-label'} Référence
         = link_to @example.link.sub(/^http:\/\//,'').sub(/[w.]*/,''), @example.link
 
-      .section
-        %label Raisons de la honte
-        - @example.reasons.each do |reason|
-          %p= I18n.t reason.label
+      - if !@example.reasons.empty?
+        .section
+          %label Raisons de la honte
+          = @example.reasons.map { |reason| I18n.t(reason.label).downcase }.join(", ")
 
 .span1
   = link_to image_tag('right-arrow.png'), next_path, :class => 'arrow-link'
