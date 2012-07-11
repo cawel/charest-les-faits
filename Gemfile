@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
+gem "cancan"
 
 # require for seeding
 gem 'factory_girl_rails'
