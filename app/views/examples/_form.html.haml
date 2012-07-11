@@ -1,4 +1,7 @@
 = simple_form_for @example, :html => {:class => "form-horizontal"} do |f|
+  - if @example.errors.any? 
+    - @example.errors.full_messages.each do |msg| 
+      %li= msg
 
   .control-group
     = f.label :headline, :class => "control-label"
