@@ -1,0 +1,11 @@
+- if @reason.errors.any? 
+  - @reason.errors.full_messages.each do |msg| 
+    %li= msg
+
+.control-group
+  = f.label :label, :class => "control-label"
+  .controls
+    = f.input_field :label, :required => :required
+
+.form-actions
+  = f.submit :Soumettre, :class => 'btn' 

@@ -1,0 +1,4 @@
+%h1 Modifier une raison
+
+= simple_form_for [:admin, @reason], :html => {:class => "form-horizontal"} do |f|
+  = render :partial => "form", :locals => {:f => f}

@@ -1,0 +1,18 @@
+%table{:class => "table-striped table-condensed"}
+  %thead
+    %tr
+      %th ID
+      %th Label
+      %th # exemples
+
+  %tbody
+    - @reasons.each do |reason|
+      %tr
+        %td= reason.id
+        %td 
+          = reason.label
+        %td 
+          = Example.for_reason(reason.id).count
+        %td
+          = link_to image_tag('icons/pencil.png'), edit_admin_reason_path(reason)
+          = link_to image_tag('icons/cross.png'), admin_reason_path(reason), :method => :delete, :confirm => "Etes-vous certain?"
