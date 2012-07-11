@@ -1,27 +1,26 @@
-= simple_form_for @example, :html => {:class => "form-horizontal"} do |f|
-  - if @example.errors.any? 
-    - @example.errors.full_messages.each do |msg| 
-      %li= msg
+- if @example.errors.any? 
+  - @example.errors.full_messages.each do |msg| 
+    %li= msg
 
-  .control-group
-    = f.label :headline, :class => "control-label"
-    .controls
-      = f.input_field :headline, :required => :required
+.control-group
+  = f.label :headline, :class => "control-label"
+  .controls
+    = f.input_field :headline, :required => :required
 
-  .control-group
-    = f.label :excerpt, :class => "control-label"
-    .controls
-      = f.input_field :excerpt, :rows => 10, :required => :required
+.control-group
+  = f.label :excerpt, :class => "control-label"
+  .controls
+    = f.input_field :excerpt, :rows => 10, :required => :required
 
-  .control-group
-    = f.label :link, :class => "control-label"
-    .controls
-      = f.input_field :link, :required => :required
+.control-group
+  = f.label :link, :class => "control-label"
+  .controls
+    = f.input_field :link, :required => :required
 
-  .control-group
-    = f.label :reasons, 'Raisons de la honte', :class => "control-label"
-    .controls
-      = f.collection_check_boxes :reason_ids, Reason.all, :id, lambda {|r| r.label}
+.control-group
+  = f.label :reasons, 'Raisons de la honte', :class => "control-label"
+  .controls
+    = f.collection_check_boxes :reason_ids, Reason.all, :id, lambda {|r| I18n.t r.label}
 
-  .form-actions
-    = f.submit :Soumettre, :class => 'btn' 
+.form-actions
+  = f.submit :Soumettre, :class => 'btn' 

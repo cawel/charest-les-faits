@@ -13,11 +13,13 @@
 %body
   %div{:class => "container"}
     %h1 Interface admin
-    = link_to "Exemples", admin_examples_path
-    |
-    = link_to "Raisons", admin_reasons_path
-    |
-    = link_to "Se déconnecter", destroy_session_url(current_admin), :method => :delete
+    %ul{:class => "nav nav-pills"}
+      %li
+        = link_to "Exemples", admin_examples_path
+      %li
+        = link_to "Raisons", admin_reasons_path
+      %li
+        = link_to "Se déconnecter", destroy_session_url(current_admin), :method => :delete
     %hr
     = render "flash_messages"
 

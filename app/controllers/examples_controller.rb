@@ -9,41 +9,24 @@ class ExamplesController < ApplicationController
   def show
     @example = Example.find(params[:id])
     history << @example.id if history.empty?
-    render 'application/index'
+    render 'examples/show'
   end
 
   def new
     @example = Example.new
   end
 
-  def edit
-    @example = Example.find(params[:id])
-  end
-
   def create
     @example = Example.new(params[:example])
 
     if @example.save
-      redirect_to example_path(@example), notice: 'Merci de votre contribution! Vous pourrez voir votre exemple aussitôt qu\'il sera approuvé.'
+      redirect_to create_confirm_url, notice: 'Merci pour votre soumission. Elle sera approuvée sous peu.'
     else
       render action: "new"
     end
   end
 
-  def update
-    @example = Example.find(params[:id])
-
-    if @example.update_attributes(params[:example])
-      redirect_to @example, notice: 'Exemple modifié avec succès.'
-    else
-      render action: "edit"
-    end
+  def create_confirm
   end
 
-  def destroy
-    @example = Example.find(params[:id])
-    @example.destroy
-
-    redirect_to examples_url
-  end
 end

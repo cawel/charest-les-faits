@@ -1,8 +1,9 @@
 CharestLaHonte::Application.routes.draw do
 
-  resources :examples,
+  match 'exemples/confirmation' => 'examples#create_confirm', :as => :create_confirm
+  resources :examples, :only => [:new, :create, :show],
     :path => "exemples",
-    :path_names => { :new => 'nouveau', :edit => 'modifier' } 
+    :path_names => { :new => 'nouveau' } 
 
   devise_for :admins, :path_prefix => "admin"
 

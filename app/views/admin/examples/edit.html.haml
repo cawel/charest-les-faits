@@ -1,0 +1,4 @@
+%h1 Modifier un exemple
+
+= simple_form_for [:admin, @example], :html => {:class => "form-horizontal"} do |f|
+  = render :partial => "/examples/form", :locals => {:f => f}
