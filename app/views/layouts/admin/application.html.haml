@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+  %title Charest - la honte !
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+
+  <!--[if IE]>
+  :css
+    .clearfix { zoom: 1; }
+  <![endif]-->
+%body
+  %div{:class => "container"}
+    %h1 Interface admin
+    = link_to "Exemples", admin_examples_path
+    |
+    = link_to "Raisons", admin_reasons_path
+    %hr
+    = render "flash_messages"
+
+    = yield
+
+    = render "footer"
