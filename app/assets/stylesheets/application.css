@@ -12,13 +12,17 @@
  *= require_tree .
  */
 
+.arrow-link:hover {background-color:transparent;}
+.headline {color:red; font-size:300%; margin:1em 0; line-height:1em;}
+.excerpt {font-style:italic;}
 .container h1 {margin-bottom:1em;}
 
 .header img {float:left; margin-right:1em; border:2px solid #ccc;}
 .header {display:table-cell; vertical-align:middle;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-ul.footer {list-style-type:none; padding:0; margin:0; text-align: center}
+hr {clear:both;}
+ul.footer {list-style-type:none; padding:0; margin:0; text-align: center; clear:both;}
 ul.footer li {margin:0; padding:0 1em; display:inline; border-left:1px solid #444;}
 ul.footer li:first-child {border-style:none;}
 

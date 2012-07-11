@@ -1,10 +1,10 @@
 = render "header"
 
-.span1{style: "background-color:cyan"}
-  = link_to "<<", root_url
+.span1
+  = link_to image_tag('left-arrow.png'), previous_path, :class => 'arrow-link'
 .span9
   - unless @example.blank?
-    = @example.headline
-    = @example.excerpt
-.span1{style: "background-color:cyan"}
-  = link_to ">>", root_url
+    .headline= @example.headline
+    .excerpt= @example.excerpt
+.span1
+  = link_to image_tag('right-arrow.png'), next_path, :class => 'arrow-link'
