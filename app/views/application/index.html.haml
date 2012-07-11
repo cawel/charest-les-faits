@@ -2,7 +2,7 @@
   = render "header"
 
 .span1
-  = link_to image_tag('left-arrow.png'), previous_path, :class => 'arrow-link'
+  = link_to image_tag('left-arrow.png', :alt => 'reculer'), previous_path, :class => 'arrow-link'
 .span9
   - unless @example.blank?
     .headline= @example.headline
@@ -19,4 +19,5 @@
           = @example.reasons.map { |reason| I18n.t(reason.label).downcase }.join(", ")
 
 .span1
-  = link_to image_tag('right-arrow.png'), next_path, :class => 'arrow-link'
+  = link_to image_tag('right-arrow.png', :alt => 'avancer'), next_path, :class => 'arrow-link', :alt => 'avancer'
+

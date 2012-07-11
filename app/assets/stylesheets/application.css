@@ -4,14 +4,14 @@
  */
 
 *, div, p, td, body {font-family: Marmelad, Ubuntu, Verdana, sans-serif;}
+p {font-size:120% !important; line-height:1.7em !important;}
 .arrow-link:hover {background-color:transparent;}
-.arrow-link img[alt='Left-arrow'] {border-right:1px solid #aaa;}
-.arrow-link img[alt='Right-arrow'] {border-left:1px solid #aaa;}
+.arrow-link img[alt='reculer'] {border-right:1px solid #aaa;}
+.arrow-link img[alt='avancer'] {border-left:1px solid #aaa;}
 .arrow-link img:hover {background-color:#eee;}
 .headline {font-family:Squada One, Verdana; color:red; font-size:320%; margin:0 0 1.5em 0; line-height:1.2em;}
 .excerpt {font-style:italic; font-size:140%;}
-.container h1 {margin-bottom:1em;}
-body {padding-top:1em;}
+.container h1 {margin:1em 0 0.2em 0;}
 .header-container {margin: auto; margin-bottom:3em; text-align: left; width: 500px;}
 .header-container h1 {margin-bottom:0.5em;}
 
@@ -40,4 +40,4 @@ input.btn, button.btn, .control-label, .collection_check_boxes {font-size:120%;}
 .control-group .controls span label {display:inline; margin-left:1em;}
 .example-info label {font-weight:bold; display:inline-block; width:12em; font-size:110%;}
 .example-info .section {font-size:130%; line-height:2.0em;}
-.example-info {margin:2em 0;}
+.example-info {margin:2em 0 3em 0;}
