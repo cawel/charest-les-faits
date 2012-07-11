@@ -1,6 +1,10 @@
 = render "header"
 
-%h2= @example.headline
-= @example.excerpt
-
-%p= link_to "créer un exemple", new_example_path
+.span1{style: "background-color:cyan"}
+  = link_to "<<", root_url
+.span9
+  - unless @example.blank?
+    = @example.headline
+    = @example.excerpt
+.span1{style: "background-color:cyan"}
+  = link_to ">>", root_url
