@@ -5,4 +5,9 @@ class Example < ActiveRecord::Base
   validates_presence_of :headline
   validates_presence_of :excerpt
   validates_presence_of :link
+
+  def link
+   return "http://#{self[:link]}" if self[:link] !~ /^http:\/\//
+   self[:link]
+  end
 end
