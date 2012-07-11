@@ -10,13 +10,14 @@ class ApplicationController < ActionController::Base
 
   def next
     puts "history = #{history} and position = #{position}"
-    inc_position if !history.empty?
+    inc_position unless history.empty?
 
     if position == history.length
       @example = sample
       history << @example.id
     else
-      @example = Example.find(history[position])
+      @example = fetch_from_history
+      (dec_position unless history.empty?; return self.next) if @example.nil?
     end
 
     redirect_to example_path(@example)
@@ -31,10 +32,17 @@ class ApplicationController < ActionController::Base
       history.unshift(@example.id)
       inc_position
     else
-      @example = Example.find(history[position])
+      @example = fetch_from_history
+      return self.previous if @example.nil?
     end
 
     redirect_to example_path(@example)
+  end
+
+  def fetch_from_history
+    example = Example.find_by_id(history[position])
+    history.delete_at position if example.nil?
+    example
   end
 
   def sample
