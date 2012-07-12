@@ -7,6 +7,7 @@
 p {font-size:120% !important; line-height:1.7em !important;}
 .arrow-link:hover {background-color:transparent;}
 .arrow-link img:hover {background-color:#ccf;}
+.arrow-link img {margin-top:4em;}
 .headline {font-family:Squada One, Verdana; color:red; font-size:320%; margin:0 0 1.5em 0; line-height:1.2em;}
 .excerpt {font-style:italic; font-size:140%; line-height:1.3em;}
 .container h1, .container h2 {margin:1em 0 0.2em 0;}
