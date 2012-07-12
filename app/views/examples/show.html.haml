@@ -22,5 +22,9 @@
           %label Raisons de la honte
           != @example.reasons.map { |reason| link_to(reason.label.downcase, by_reason_path(reason)) }.join(", ")
 
+    .social-buttons
+      = render :partial => 'twitter_button'
+      = render :partial => 'facebook_button'
+
 .span1
   = link_to image_tag('right-arrow.png', :alt => 'avancer'), next_path, :class => 'arrow-link', :alt => 'avancer'
