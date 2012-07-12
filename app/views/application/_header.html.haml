@@ -1,7 +1,9 @@
-.header-container
-  %h1= text
-  .header{:class => 'clearfix'}
-    %img{:src => '/assets/charest.png', :width => '100px'}
-    .name-and-title
-      %h2 Jean Charest
-      %h3 Premier ministre du Québec (2003 - 2012)
+.row
+  .span12
+    .header-container
+      .header
+        %img{:src => '/assets/charest.png', :width => '100px'}
+        %h1= link_to 'La honte a un visage', root_url
+        .name-and-title
+          %h2 Jean Charest
+          %h3 Premier ministre du Québec (2003 - 2012)

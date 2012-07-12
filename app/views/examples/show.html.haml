@@ -1,30 +1,32 @@
-.span12{style: "text-align: center; margin:auto;"}
-  = render "header", {:text => 'La honte a un visage'}
+= render "header"
 
 .row
-  - if filtering_by_reason
-    %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Cliquez ici', clear_by_reason_path} pour revenir à tous les exemples."
+  .span12
+    - if filtering_by_reason
+      %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Cliquez ici', clear_by_reason_path} pour revenir à tous les exemples."
 
-.span1
-  = link_to image_tag('left-arrow.png', :alt => 'reculer'), previous_path, :class => 'arrow-link'
-.span9
-  - unless @example.blank?
-    .headline= @example.headline
-    .excerpt= @example.excerpt
+.row
+  .span1
+    = link_to image_tag('left-arrow.png', :alt => 'reculer', :title => 'Faire reculer'), previous_path, :class => 'arrow-link'
+  .span10
+    .card
+      - unless @example.blank?
+        .headline= @example.headline
+        .excerpt= @example.excerpt
 
-    .example-info
-      .section
-        %label{:class => 'control-label'} Référence
-        = link_to @example.link.sub(/^http:\/\//,'').sub(/[w.]*/,''), @example.link
+        .example-info
+          .section
+            %label{:class => 'control-label'} Référence
+            = link_to @example.link.sub(/^http:\/\//,'').sub(/[w.]*/,''), @example.link, {:class => 'external', :target => '_blank'}
 
-      - if !@example.reasons.empty?
-        .section
-          %label Raisons de la honte
-          != @example.reasons.map { |reason| link_to(reason.label.downcase, by_reason_path(reason)) }.join(", ")
+          - if !@example.reasons.empty?
+            .section
+              %label Raisons de la honte
+              != @example.reasons.map { |reason| link_to(reason.label.downcase, by_reason_path(reason)) }.join(", ")
 
-    .social-buttons
-      = render :partial => 'twitter_button'
-      = render :partial => 'facebook_button'
+        .social-buttons
+          = render :partial => 'twitter_button'
+          = render :partial => 'facebook_button'
 
-.span1
-  = link_to image_tag('right-arrow.png', :alt => 'avancer'), next_path, :class => 'arrow-link', :alt => 'avancer'
+  .span1
+    = link_to image_tag('right-arrow.png', :alt => 'avancer', :title => 'Faire avancer'), next_path, :class => 'arrow-link', :alt => 'avancer'

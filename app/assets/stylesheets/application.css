@@ -6,29 +6,29 @@
 *, div, p, td, body {font-family: Marmelad, Ubuntu, Verdana, sans-serif;}
 p {font-size:120% !important; line-height:1.7em !important;}
 .arrow-link:hover {background-color:transparent;}
-.arrow-link img[alt='reculer'] {border-right:1px solid #aaa;}
-.arrow-link img[alt='avancer'] {border-left:1px solid #aaa;}
-.arrow-link img:hover {background-color:#eee;}
+.arrow-link img:hover {background-color:#ccf;}
 .headline {font-family:Squada One, Verdana; color:red; font-size:320%; margin:0 0 1.5em 0; line-height:1.2em;}
 .excerpt {font-style:italic; font-size:140%; line-height:1.3em;}
-.container h1 {margin:1em 0 0.2em 0;}
-.header-container {margin: auto; margin-bottom:3em; text-align: left; width: 500px;}
+.container h1, .container h2 {margin:1em 0 0.2em 0;}
+.header-container {margin: auto; margin-bottom:1em; text-align: left; width: 500px;}
 .header-container h1 {margin-bottom:0.5em;}
 
+a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-right:14px;}
 .social-buttons {margin-bottom:1em;}
 .filter-notice {text-align:center; font-size:150% !important; width:900px; margin:auto; margin-bottom:1em; background-color:#eee; padding:0.5em 1em;}
 
+.card {margin-top:2em; padding:2em 4em; box-shadow: 0px 3px 10px 1px #aaa;}
 h1.nouveau-example {margin-left:220px;}
 
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}
-.header .name-and-title {margin-top:1.8em;}
 .header-container h1 {letter-spacing:0.10em;}
+.header-container h2 {margin-top:0;}
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-.footer hr{clear:both; border-top-color:#ccc;}
 .footer ul {font-size:130%; list-style-type:none; padding:0; margin:0; text-align: center; clear:both;}
 .footer ul li {margin:0; padding:0 1em; display:inline; border-left:1px solid #888;}
 .footer ul li:first-child {border-style:none;}
+.footer {margin:3em 1em 2em 1em;}
 
 .controls textarea, .controls input#example_headline, .controls input#example_link {width:40em;}
 .controls * {vertical-align:middle;}

@@ -1,5 +1,6 @@
-= render "header", {:text => 'Raisons de la honte'}
-%h1 Raisons
+= render "header"
+
+%h1 Raisons de la honte
 - @reasons_with_count.each do |reason, count|
   %p!= "#{reason.label} (#{count == 0 ? "0 exemples" : link_to(pluralize(count, "exemple"), by_reason_path(reason))})"
 
