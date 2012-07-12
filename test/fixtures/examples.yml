@@ -4,8 +4,10 @@ one:
   headline: MyString
   link: MyString
   excerpt: MyText
+  reasons: [corruption]
 
 two:
   headline: MyString
   link: MyString
   excerpt: MyText
+  reasons: [transparence]

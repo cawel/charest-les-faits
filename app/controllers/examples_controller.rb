@@ -9,7 +9,6 @@ class ExamplesController < ApplicationController
   def show
     @example = Example.find(params[:id])
     history << @example.id if history.empty?
-    render 'examples/show'
   end
 
   def new

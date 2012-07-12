@@ -28,28 +28,28 @@ class ApplicationController < ActionController::Base
   end
 
   def next
-    puts "history = #{history} and position = #{position}"
-    inc_position unless history.empty?
+    logger.info "history = #{history} and position = #{position}"
+    inc_position
 
     if position == history.length
-      @example = sample
+      @example = Example.sample(history, session[:filter_by_reason])
       history << @example.id
     else
       @example = fetch_from_history
-      (dec_position unless history.empty?; return self.next) if @example.nil?
+      (dec_position; return self.next) if @example.nil?
     end
 
     redirect_to example_path(@example)
   end
 
   def previous
-    puts "history = #{history} and position = #{position}"
+    logger.info "history = #{history} and position = #{position}"
     dec_position
 
     if position < 0
-      @example = sample
-      history.unshift(@example.id)
       inc_position
+      @example = Example.sample(history, session[:filter_by_reason])
+      history.unshift(@example.id)
     else
       @example = fetch_from_history
       return self.previous if @example.nil?
@@ -65,28 +65,18 @@ class ApplicationController < ActionController::Base
     example
   end
 
-  def sample
-    filter = filtering_by_reason ? Example.for_reason(session[:filter_by_reason]) : Example
-
-    example = filter.all.sample if history.empty?
-    example = filter.find(:first, :conditions => ['examples.id not in (?)', history], :order => 'RANDOM()') if example.nil?
-    example = filter.all.sample if example.nil?
-
-    logger.info "sampled out example #{example}"
-    logger.error "could not find any examples. Are there any examples in the database?" if example.nil?
-    example
-  end
-
   def dec_position
+    (session[:position] = 0; return 0) if session[:position].nil?
     session[:position] -= 1
   end
 
   def inc_position
+    (session[:position] = 0; return 0) if session[:position].nil?
     session[:position] += 1
   end
 
   def position
-    session[:position] ||= 0
+    session[:position] ||= nil
   end
 
   def history
@@ -95,7 +85,7 @@ class ApplicationController < ActionController::Base
 
   def clear_history
     history.clear
-    session[:position] = 0
+    session[:position] = nil
   end
 
   private

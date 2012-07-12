@@ -12,4 +12,17 @@ class Example < ActiveRecord::Base
    return "http://#{self[:link]}" if self[:link] !~ /^http:\/\//
    self[:link]
   end
+
+  def self.sample history, reason_id
+    filter = !reason_id.nil? ? Example.for_reason(reason_id) : Example
+
+    example = filter.all.sample if history.empty?
+    example = filter.find(:first, :conditions => ['examples.id not in (?)', history], :order => 'RANDOM()') if example.nil?
+    example = filter.all.sample if example.nil?
+
+    logger.info "sampled out example #{example}"
+    logger.error "could not find any examples. Are there any examples in the database?" if example.nil?
+    example
+  end
+
 end

@@ -10,7 +10,7 @@ p {font-size:120% !important; line-height:1.7em !important;}
 .arrow-link img[alt='avancer'] {border-left:1px solid #aaa;}
 .arrow-link img:hover {background-color:#eee;}
 .headline {font-family:Squada One, Verdana; color:red; font-size:320%; margin:0 0 1.5em 0; line-height:1.2em;}
-.excerpt {font-style:italic; font-size:140%;}
+.excerpt {font-style:italic; font-size:140%; line-height:1.3em;}
 .container h1 {margin:1em 0 0.2em 0;}
 .header-container {margin: auto; margin-bottom:3em; text-align: left; width: 500px;}
 .header-container h1 {margin-bottom:0.5em;}
