@@ -8,7 +8,9 @@
     .card
       - unless @example.blank?
         .headline= @example.headline
-        .excerpt= @example.excerpt
+        .excerpt
+          .quotation-marks= "“"
+          = @example.excerpt
 
         .example-info
           .section
