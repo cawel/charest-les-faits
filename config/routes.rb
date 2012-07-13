@@ -15,7 +15,6 @@ CharestLaHonte::Application.routes.draw do
 
   match 'a-propos' => 'application#about', :as => 'about'
   match 'se-debarrasser-de-la-honte' => 'application#good_riddance', :as => 'good_riddance'
-  match 'en-arriere' => 'application#previous', :as => 'previous'
   match 'en-avant' => 'application#next', :as => 'next'
   match 'raisons' => 'application#reasons', :as => 'reasons'
   match 'filtrer-par-raison/:id' => 'application#by_reason', :as => 'by_reason'

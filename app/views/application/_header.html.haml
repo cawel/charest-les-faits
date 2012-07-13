@@ -1,9 +1,18 @@
-.row
-  .span12
-    .header-container
-      .header
-        %img{:src => '/assets/charest.png', :width => '100px'}
-        %h1= link_to 'La honte a un visage', root_url
-        .name-and-title
-          %h2 Jean Charest
-          %h3 Premier ministre du Québec (2003 - 2012)
+.header-container
+  .container
+    .row
+      .span10
+        .header
+          %h1= link_to 'La honte a un visage.', root_url
+          %h3 Ça suffit Jean Charest. Voici les faits.
+
+          %ul
+            - Reason.all.each do |reason|
+              - next if Example.for_reason(reason).count == 0
+              %li{:class => "#{current_reason?(reason) ? 'current' : ''}"}
+                - if current_reason?(reason)
+                  = reason.label
+                - else
+                  = link_to reason.label, by_reason_path(reason)
+
+

@@ -6,15 +6,16 @@
   = javascript_include_tag "application"
   = csrf_meta_tags
   <link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
   <link href="/favicon.ico" rel="icon" type="image/x-icon">
 
 %body
   = render "facebook_setup"
+  = render "header"
 
-  %div{:class => "container"}
-    = render "flash_messages"
+  .ribbon
+    .container
+      = render "flash_messages"
+      = yield
 
-    = yield
-
-    = render "footer"
+  = render "footer"

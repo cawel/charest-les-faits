@@ -1,13 +1,9 @@
-= render "header"
-
 .row
   .span12
     - if filtering_by_reason
       %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Cliquez ici', clear_by_reason_path} pour revenir à tous les exemples."
 
 .row
-  .span1
-    = link_to image_tag('left-arrow.png', :alt => 'reculer', :title => 'Faire reculer'), previous_path, :class => 'arrow-link'
   .span10
     .card
       - unless @example.blank?
@@ -16,17 +12,14 @@
 
         .example-info
           .section
-            %label{:class => 'control-label'} Référence
             = link_to @example.link.sub(/^http:\/\//,'').sub(/[w.]*/,''), @example.link, {:class => 'external', :target => '_blank'}
-
-          - if !@example.reasons.empty?
-            .section
-              %label Raisons de la honte
-              != @example.reasons.map { |reason| link_to(reason.label.downcase, by_reason_path(reason)) }.join(", ")
 
         .social-buttons
           = render :partial => 'twitter_button'
           = render :partial => 'facebook_button'
 
-  .span1
-    = link_to image_tag('right-arrow.png', :alt => 'avancer', :title => 'Faire avancer'), next_path, :class => 'arrow-link', :alt => 'avancer'
+  .span2
+    %a{:href => next_path, :alt => 'Encore!', :class => 'next-button'}
+      Mais encore?
+      = image_tag("ff.png")
+    = link_to "Soumets ton exemple", new_example_path, :class => 'submit-button'

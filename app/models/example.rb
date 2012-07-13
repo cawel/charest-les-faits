@@ -18,7 +18,10 @@ class Example < ActiveRecord::Base
 
     example = filter.all.sample if history.empty?
     example = filter.find(:first, :conditions => ['examples.id not in (?)', history], :order => 'RANDOM()') if example.nil?
-    example = filter.all.sample if example.nil?
+    if example.nil?
+      example = filter.all.sample 
+      history.clear
+    end
 
     logger.info "sampled out example #{example}"
     logger.error "could not find any examples. Are there any examples in the database?" if example.nil?
