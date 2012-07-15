@@ -5,9 +5,11 @@ one:
   link: MyString
   excerpt: MyText
   reasons: [corruption]
+  approved: true
 
 two:
   headline: MyString
   link: MyString
   excerpt: MyText
   reasons: [transparence]
+  approved: true

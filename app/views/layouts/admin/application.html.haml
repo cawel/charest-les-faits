@@ -1,18 +1,18 @@
 !!!
 %html
   %head
-  %title Charest - la honte !
+  %title Charest — la honte! (console admin)
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
   = csrf_meta_tags
+  <link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+  <link href="/favicon.ico" rel="icon" type="image/x-icon">
 
-  <!--[if IE]>
-  :css
-    .clearfix { zoom: 1; }
-  <![endif]-->
 %body
-  %div{:class => "container"}
+  .container
     %h1 Interface admin
+
     %ul{:class => "nav nav-pills"}
       %li
         = link_to "Exemples", admin_examples_path
@@ -22,7 +22,6 @@
         = link_to "Se déconnecter", destroy_session_url(current_admin), :method => :delete
     %hr
     = render "flash_messages"
-
     = yield
 
-    = render "footer"
+  = render "footer"

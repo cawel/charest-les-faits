@@ -1,5 +1,6 @@
 class Example < ActiveRecord::Base
   scope :for_reason, lambda {|r| joins(:reasons).where("examples_reasons.reason_id = ?", r)}
+  scope :approved, where(:approved => true)
 
   attr_accessible :excerpt, :headline, :link, :reasons, :reason_ids
   has_and_belongs_to_many :reasons
@@ -14,7 +15,7 @@ class Example < ActiveRecord::Base
   end
 
   def self.sample history, reason_id
-    filter = !reason_id.nil? ? Example.for_reason(reason_id) : Example
+    filter = !reason_id.nil? ? Example.approved.for_reason(reason_id) : Example.approved
 
     example = filter.all.sample if history.empty?
     example = filter.find(:first, :conditions => ['examples.id not in (?)', history], :order => 'RANDOM()') if example.nil?

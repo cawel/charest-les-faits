@@ -19,7 +19,7 @@ p, li {font-size:120% !important; line-height:1.7em !important;}
 
 a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-right:14px;}
 .social-buttons {margin-bottom:1em;}
-.filter-notice {text-align:center; font-size:145% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
+.alert, .filter-notice {text-align:center; font-size:145% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
 .submit-button, .next-button {font-weight:bold; display:block; }
 .submit-button {margin-top:1em; font-size:150%;}
@@ -30,7 +30,7 @@ a.external {background: url(/assets/externallink.png) no-repeat; background-posi
 .next-button img {margin-top:5px;}
 
 .card {margin-top:4em; padding-right:1em;}
-h1.nouveau-example {margin-left:220px;}
+h1.new-example {margin-left:220px;}
 
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}
 .header-container h1 {margin-top:0em;}

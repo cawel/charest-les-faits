@@ -10,8 +10,12 @@ class Admin::ExamplesController < AdminController
   end
 
   def update
-    if @example.update_attributes(params[:example])
-      redirect_to admin_examples_path, :notice => 'Exemple modifié avec succès.'
+    approved = params[:example].delete :approved
+    @example.attributes = params[:example]
+    @example.approved = approved
+
+    if @example.save
+      redirect_to admin_examples_path, :notice => "L'exemple a bien été modifié."
     else
       render action: "edit"
     end
