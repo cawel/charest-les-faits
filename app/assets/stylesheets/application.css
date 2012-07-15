@@ -2,10 +2,12 @@
  *= require_self
  *= require_tree .
  */
+table thead tr th {background-color:#bbb;}
+table tbody tr td {border-bottom:1px solid #bbb;}
 
 *, div, p, td, li, body {font-family: Marmelad, Ubuntu, Verdana, sans-serif;}
 body {background-color:#eee !important;}
-p, li {font-size:120% !important; line-height:1.7em !important;}
+p, li, td, th {font-size:120% !important; line-height:1.7em !important;}
 .headline {font-family:IM Fell English SC, Serif; color:red; font-size:320%; margin:0 0 1.5em 0; line-height:1.2em;}
 .excerpt {position:relative; font-style:italic; font-size:140%; line-height:1.3em;}
 .container h1, .container h2 {margin:1em 0 0.2em 0;}

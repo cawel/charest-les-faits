@@ -4,6 +4,7 @@ class Admin::ExamplesController < AdminController
   load_and_authorize_resource
 
   def index
+    @examples = Example.order('created_at desc').all
   end
 
   def edit
