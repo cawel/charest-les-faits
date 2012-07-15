@@ -19,6 +19,7 @@ CharestLaHonte::Application.routes.draw do
   match 'raisons' => 'application#reasons', :as => 'reasons'
   match 'filtrer-par-raison/:id' => 'application#by_reason', :as => 'by_reason'
   match 'voir-toutes-les-raisons' => 'application#clear_by_reason', :as => 'clear_by_reason'
+  match '/feed' => 'examples#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   root :to => 'application#index'
 
