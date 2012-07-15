@@ -21,9 +21,9 @@ a.external {background: url(/assets/externallink.png) no-repeat; background-posi
 .social-buttons {margin-bottom:1em;}
 .filter-notice {text-align:center; font-size:145% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
-.submit-button, .next-button {font-weight:bold; display:block; padding:1em;}
-.submit-button {background-color:#ddf; margin-top:1em; font-size:150%;}
-.next-button {margin-top:2em;font-size:200%;}
+.submit-button, .next-button {font-weight:bold; display:block; }
+.submit-button {margin-top:1em; font-size:150%;}
+.next-button {margin-top:2em;font-size:200%;padding:1em; box-shadow: 3px 3px 6px 0 #444;}
 .next-button {color:white; background-color:black; height:5em; }
 .next-button:visited {color:white;}
 .next-button:hover {color:white; background-color:black;}
