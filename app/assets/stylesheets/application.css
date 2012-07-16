@@ -19,7 +19,7 @@ p, li, td, th {font-size:120% !important; line-height:1.7em !important;}
 
 .quotation-marks {position:absolute; left:-60px; top:10px; font-size:500%; color:#aaa;}
 
-a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-right:14px;}
+a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-left: 7; padding-right:21px;}
 .social-buttons {margin-bottom:1em;}
 .alert, .filter-notice {text-align:center; font-size:145% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
