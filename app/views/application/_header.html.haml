@@ -8,7 +8,7 @@
 
           %ul
             - Reason.all.each do |reason|
-              - next if Example.for_reason(reason).count == 0
+              - next if Example.approved.for_reason(reason).count == 0
               %li{:class => "#{current_reason?(reason) ? 'current' : ''}"}
                 - if current_reason?(reason)
                   = reason.label
