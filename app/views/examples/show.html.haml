@@ -14,11 +14,8 @@
 
         .example-info
           .section
-            #excerpt_source_title
-              = link_to_function "montrer la source", "$('#excerpt_source_content').toggle();", :style => "padding-left: 55px"
-            #excerpt_source_content
-              Source:
-              = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
+            Source :
+            = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
 
         .social-buttons
           = render :partial => 'twitter_button'
