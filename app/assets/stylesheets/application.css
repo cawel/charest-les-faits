@@ -15,7 +15,8 @@ p, li, td, th {font-size:120% !important; line-height:1.7em !important;}
 .header h1 a {font-family: IM Fell English SC, Serif; font-size:150%; color:black;}
 .header ul {list-style-type:none; margin:1em 0 0 0; padding:0; width:500px; }
 .header ul li {float:left; background-color:white; padding:0.3em 1em; margin-top:5px;margin-right:1em;}
-.ribbon {border-width:4px 0 4px 0; border-color:#333; border-style:solid; background-color:white; padding-bottom:4em;}
+.ribbon {border-width: 3px 0 0 0; border-color:#333; border-style:solid; background-color:white; padding-bottom:4em;}
+.ribbon {box-shadow: 0 3px 5px #333; background-color:white; }
 
 .quotation-marks {position:absolute; left:-60px; top:10px; font-size:500%; color:#aaa;}
 
@@ -40,10 +41,8 @@ h1.new-example {margin-left:220px;}
 .header ul li.current {background-color:black; color:white; border-color:black;}
 .header ul li {border:1px solid white;}
 
-.footer ul {font-size:130%; list-style-type:none; padding:0; margin:0; text-align: center; clear:both;}
-.footer ul li {margin:0; padding:0 1em; display:inline; border-left:1px solid #888;}
-.footer ul li:first-child {border-style:none;}
-.footer {padding:2em;}
+.footer {padding:1em;}
+.fb-iframe{margin-top: 10px;}
 
 .controls textarea, .controls input#example_headline, .controls input#example_link {width:40em;}
 .controls * {vertical-align:middle;}
