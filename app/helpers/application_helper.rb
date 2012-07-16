@@ -11,4 +11,5 @@ module ApplicationHelper
     no_http = link.sub(/^http:\/\//,'').sub(/[w.]*/,'')
     no_slashes = no_http.sub(/\/.*/, '')
   end
+
 end

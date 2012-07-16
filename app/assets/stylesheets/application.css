@@ -15,21 +15,21 @@ p, li, td, th {font-size:120% !important; line-height:1.7em !important;}
 .header h1 a {font-family: IM Fell English SC, Serif; font-size:150%; color:black;}
 .header ul {list-style-type:none; margin:1em 0 0 0; padding:0; width:500px; }
 .header ul li {float:left; background-color:white; padding:0.3em 1em; margin-top:5px;margin-right:1em;}
-.ribbon {box-shadow: 0 0 3px 3px #333; background-color:white; padding-bottom:4em;}
+.ribbon {border-width:4px 0 4px 0; border-color:#333; border-style:solid; background-color:white; padding-bottom:4em;}
 
 .quotation-marks {position:absolute; left:-60px; top:10px; font-size:500%; color:#aaa;}
 
 a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-left: 7; padding-right:21px;}
 .social-buttons {margin-bottom:1em;}
-.alert, .filter-notice {text-align:center; font-size:145% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
+.alert, .filter-notice {text-align:center; font-size:130% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
 .submit-button, .next-button {font-weight:bold; display:block; }
-.submit-button {margin-top:1em; font-size:150%;}
-.next-button {margin-top:2em;font-size:200%;padding:1em; box-shadow: 3px 3px 6px 0 #444;}
+.submit-button {margin-top:2em; font-size:150%;}
+.next-button {margin-top:2em;font-size:200%;padding:1.5em 1em 2em 1em; box-shadow: 3px 3px 6px 0 #444;}
 .next-button {color:white; background-color:black; height:5em; }
 .next-button:visited {color:white;}
 .next-button:hover {color:white; background-color:black;}
-.next-button img {margin-top:5px;}
+.next-button img {margin-top:25px;}
 
 .card {margin-top:4em; padding-right:1em;}
 h1.new-example {margin-left:220px;}
@@ -37,7 +37,7 @@ h1.new-example {margin-left:220px;}
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}
 .header-container h1 {margin-top:0em;}
 .header-container h2 {margin-top:0;}
-.header ul li.current {border:1px solid #333;}
+.header ul li.current {background-color:black; color:white; border-color:black;}
 .header ul li {border:1px solid white;}
 
 .footer ul {font-size:130%; list-style-type:none; padding:0; margin:0; text-align: center; clear:both;}
