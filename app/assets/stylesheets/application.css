@@ -26,8 +26,8 @@ a.external {background: url(/assets/externallink.png) no-repeat; background-posi
 
 .submit-button, .next-button {font-weight:bold; display:block; }
 .submit-button {margin-top:2em; font-size:150%;}
-.next-button {margin-top:2em;font-size:200%;padding:1.5em 1em 2em 1em; box-shadow: 3px 3px 6px 0 #444;}
-.next-button {color:white; background-color:black; height:5em; }
+.next-button {margin-top:2em;text-align:center; line-height:1em;font-size:150%;padding:1.5em 1em 2em 1em; box-shadow: 3px 3px 6px 0 #444;}
+.next-button {color:white; background-color:black; height:6em; }
 .next-button:visited {color:white;}
 .next-button:hover {color:white; background-color:black;}
 .next-button img {margin-top:25px;}
