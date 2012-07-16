@@ -15,7 +15,7 @@ p, li, td, th {font-size:120% !important; line-height:1.7em !important;}
 .header h1 a {font-family: IM Fell English SC, Serif; font-size:150%; color:black;}
 .header ul {list-style-type:none; margin:1em 0 0 0; padding:0; width:500px; }
 .header ul li {float:left; background-color:white; padding:0.3em 1em; margin-top:5px;margin-right:1em;}
-.ribbon {box-shadow: 0 0 3px 3px #333; background-color:white; padding-bottom:4em;}
+.ribbon {border-width:4px 0 4px 0; border-color:#333; border-style:solid; background-color:white; padding-bottom:4em;}
 
 .quotation-marks {position:absolute; left:-60px; top:10px; font-size:500%; color:#aaa;}
 

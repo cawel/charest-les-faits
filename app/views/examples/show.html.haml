@@ -14,7 +14,7 @@
 
         .example-info
           .section
-            = link_to @example.link.sub(/^http:\/\//,'').sub(/[w.]*/,''), @example.link, {:class => 'external', :target => '_blank'}
+            = link_to clean_link(@example.link), @example.link, {:class => 'external', :target => '_blank'}
 
         .social-buttons
           = render :partial => 'twitter_button'
