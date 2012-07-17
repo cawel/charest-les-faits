@@ -1,5 +1,4 @@
-if Reason.table_exists?
-  Reason.delete_all
+if Reason.table_exists? and Reason.all.empty?
   Reason.new({:label => 'Corruption'}).save!
   Reason.new({:label => 'Collusion'}).save!
   Reason.new({:label => 'Manque de transparence'}).save!
