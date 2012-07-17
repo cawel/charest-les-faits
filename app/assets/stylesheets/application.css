@@ -12,7 +12,7 @@ p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;
 .headline {font-family:IM Fell English SC, Serif; color:red; font-size:320%; margin:0 0 1em 0; line-height:1.2em;}
 .excerpt {position:relative; font-size:20px; line-height:1.3em;}
 .container h1, .container h2 {margin:1em 0 0.2em 0;}
-.header-container {margin: auto; background:#ddd url('/assets/charest.png') no-repeat 850px -20px; padding:2em 0em 4em 0em; height:10em;}
+.header-container {margin: auto; background:#ddd url('/assets/charest.png') no-repeat 980px -20px; padding:2em 0em 4em 0em; height:10em;}
 .header h1 a {font-family: IM Fell English SC, Serif; font-size:46px; color:black;}
 .header ul {list-style-type:none; margin:1em 0 0 0; padding:0; width:500px; }
 .header ul li {float:left; background-color:white; padding:0em 0.5em; margin-top:8px; margin-right:8px;}
