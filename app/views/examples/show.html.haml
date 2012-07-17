@@ -1,9 +1,4 @@
 .row
-  .span12
-    - if filtering_by_reason
-      %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Revenir à tous les exemples', clear_by_reason_path}"
-
-.row
   .span10
     .viewport
       .card
@@ -28,8 +23,3 @@
     .right-of-card
       %a{:href => next_path, :alt => 'Un autre exemple', :title => 'Un autre exemple', :class => 'next-button'}
         = image_tag("ff.png", :class => "ff")
-
-:javascript
-  // height of right-of-card should == height of card
-  h = $(".card").height();
-  $(".right-of-card").height(h);
