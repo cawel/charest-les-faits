@@ -1,7 +1,7 @@
 .row
   .span12
     - if filtering_by_reason
-      %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Cliquez ici', clear_by_reason_path} pour revenir à tous les exemples."
+      %p{:class => 'filter-notice'}!= "Vous consultez les exemples de <b>#{Reason.find(session[:filter_by_reason]).label.downcase}</b>. #{link_to 'Revenir à tous les exemples', clear_by_reason_path}"
 
 .row
   .span10

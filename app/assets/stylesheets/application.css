@@ -22,7 +22,7 @@ p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;
 .quotation-marks {position:absolute; left:-50px; top:20px; font-size:500%; color:#aaa; font-family:Georgia;}
 
 a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-left: 7; padding-right:21px;}
-.alert, .filter-notice {text-align:center; font-size:120% !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
+.alert, .filter-notice {text-align:center; font-size:20px !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
 .next-button {display:block; text-align:center; width:10em; margin-top:5em; background-color:black; border:3px solid white;}
 .next-button:hover {border:3px solid #66c;}
