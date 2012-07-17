@@ -22,5 +22,11 @@
             = render :partial => 'twitter_button'
 
   .span2
-    %a{:href => next_path, :alt => 'Un autre exemple', :title => 'Un autre exemple', :class => 'next-button'}
-      = image_tag("ff.png")
+    .right-of-card
+      %a{:href => next_path, :alt => 'Un autre exemple', :title => 'Un autre exemple', :class => 'next-button'}
+        = image_tag("ff.png", :class => "ff")
+
+:javascript
+  // height of right-of-card should == height of card
+  h = $(".card").height();
+  $(".right-of-card").height(h);

@@ -24,10 +24,12 @@ p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;
 a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-left: 7; padding-right:21px;}
 .alert, .filter-notice {text-align:center; font-size:20px !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
-.next-button {display:block; text-align:center; width:10em; margin-top:5em; background-color:black; border:3px solid white;}
-.next-button:hover {border:3px solid #66c;}
+.next-button {box-shadow: 2px 3px 5px #333; background-color:white; }
+.next-button {display:block; text-align:center; width:10em; margin-top:5em; background-color:black; border:0px solid white; margin-left:30px}
+.next-button:hover {border:3px solid white;}
 
 .card {margin-top:4em; padding-right:1em;}
+.right-of-card{border-left:1px solid #eee; }
 h1.new-example {margin-left:220px;}
 
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}
