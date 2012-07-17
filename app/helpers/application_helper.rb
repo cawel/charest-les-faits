@@ -4,6 +4,8 @@ module ApplicationHelper
   end
 
   def current_reason? reason
+    return true if (session[:filter_by_reason].nil? && reason.nil?)
+    return false if (!session[:filter_by_reason].nil? && reason.nil?)
     session[:filter_by_reason] == reason.id.to_s
   end
 
