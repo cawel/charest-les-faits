@@ -28,8 +28,9 @@ a.external {background: url(/assets/externallink.png) no-repeat; background-posi
 .next-button {display:block; text-align:center; width:10em; margin-top:5em; background-color:black; border:0px solid white; margin-left:30px}
 .next-button:hover {box-shadow: 0 0 0 0; border:3px solid white; margin-bottom:0;}
 
+.viewport{border-right: 1px solid #ccc}
+
 .card {margin-top:4em; padding-right:1em;}
-.right-of-card{border-left:1px solid #ccc; }
 h1.new-example {margin-left:220px;}
 
 .header img {float:left; margin-right:2em; border:3px solid #ccc;}

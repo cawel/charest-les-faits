@@ -1,20 +1,23 @@
 .row
   .span10
-    .card
-      - unless @example.blank?
-        .headline= @example.headline
-        .excerpt
-          .quotation-marks= "“"
-          = @example.excerpt
+    .viewport
+      .card
+        - unless @example.blank?
+          .headline= @example.headline
+          .excerpt
+            .quotation-marks= "“"
+            = @example.excerpt
 
-        .example-info
-          .section
-            Source :
-            = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
+          .row
+            .span10
+              .example-info
+                .section
+                  Source :
+                  = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
 
-          .social-buttons
-            = render :partial => 'facebook_button'
-            = render :partial => 'twitter_button'
+                .social-buttons
+                  = render :partial => 'facebook_button'
+                  = render :partial => 'twitter_button'
 
   .span2
     .right-of-card
