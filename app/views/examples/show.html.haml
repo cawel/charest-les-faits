@@ -17,12 +17,10 @@
             Source :
             = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
 
-        .social-buttons
-          = render :partial => 'twitter_button'
-          = render :partial => 'facebook_button'
+          .social-buttons
+            = render :partial => 'facebook_button'
+            = render :partial => 'twitter_button'
 
   .span2
-    %a{:href => next_path, :alt => 'Encore!', :class => 'next-button'}
-      Quoi d'autre?
+    %a{:href => next_path, :alt => 'Un autre exemple', :title => 'Un autre exemple', :class => 'next-button'}
       = image_tag("ff.png")
-    = link_to "Soumets ton exemple", new_example_path, :class => 'submit-button'

@@ -3,13 +3,6 @@
     .row 
       .span4
         %ul{:class => "nav nav-list"}
-          %li{:class => "nav-header "}
-            Contenu
-          %li= link_to "accueil", root_url
-          %li= link_to "à propos", about_path
-          %li= link_to "RSS", feed_path
-      .span4
-        %ul{:class => "nav nav-list"}
           %li{:class => "nav-header"}
             Agir
           %li= link_to "soumettre un exemple", new_example_path
@@ -19,4 +12,11 @@
               = image_tag "/assets/icons/email.jpg" 
           %li= link_to "se débarrasser de la honte", good_riddance_path
       .span4
-        %iframe{:src=>"//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FTheNPA&width=292&height=170&colorscheme=light&show_faces=true&border_color&stream=false&header=false", :scrolling=>"no", :frameborder=>"0", :style=>"border:none; overflow:hidden; width:292px; height:170px;", :allowTransparency=>"true", :class => "fb-iframe"}
+        %ul{:class => "nav nav-list"}
+          %li{:class => "nav-header "}
+            Contenu
+          %li= link_to "accueil", root_url
+          %li= link_to "à propos", about_path
+          %li= link_to "RSS", feed_path
+      .span4
+        %iframe{:src=>"//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FTheNPA&width=292&height=170&colorscheme=light&show_faces=true&border_color=white&stream=false&header=false", :scrolling=>"no", :frameborder=>"0", :style=>"border:none; overflow:hidden; width:292px; height:170px;", :allowTransparency=>"true", :class => "fb-iframe"}
