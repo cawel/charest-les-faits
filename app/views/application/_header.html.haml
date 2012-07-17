@@ -13,6 +13,6 @@
                 - if current_reason?(reason)
                   = reason.label
                 - else
-                  = link_to reason.label, by_reason_path(reason)
+                  = link_to "#{reason.label} (#{Example.for_reason(reason).size})", by_reason_path(reason)
 
 
