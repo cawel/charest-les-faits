@@ -26,7 +26,7 @@ a.external {background: url(/assets/externallink.png) no-repeat; background-posi
 
 .next-button {box-shadow: 2px 3px 5px #333; background-color:white; }
 .next-button {display:block; text-align:center; width:10em; margin-top:5em; background-color:black; border:0px solid white; margin-left:30px}
-.next-button:hover {border:3px solid white;}
+.next-button:hover {border:3px solid #ddd;}
 
 .card {margin-top:4em; padding-right:1em;}
 .right-of-card{border-left:1px solid #ccc; }
