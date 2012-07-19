@@ -25,7 +25,7 @@ p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;
 
 .quotation-marks {position:absolute; left:-60px; top:32px; font-size:700%; color:#aaa; font-family:Georgia;}
 
-a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-left: 7; padding-right:21px;}
+a.external {background: url(/assets/externallink.png) no-repeat; background-position: 100% 50%; padding-right:15px;}
 .alert, .filter-notice {text-align:center; font-size:20px !important; width:900px; margin:auto; background-color:#fe8; padding:0.5em 1em;}
 
 .next-button {box-shadow: 0px 5px 10px #333; background-color:white; margin-bottom:6px;}
