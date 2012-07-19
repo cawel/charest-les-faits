@@ -1,7 +1,7 @@
 %li{:class => "#{current_reason?(reason) ? 'current' : ''}"}
   - label = "#{label} (#{count})"
   - if current_reason?(reason)
-    = label
+    != "<a>#{label}</a>"
   - else
     = link_to label, path
 
