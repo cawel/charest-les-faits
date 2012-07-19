@@ -2,7 +2,7 @@ class Example < ActiveRecord::Base
   scope :for_reason, lambda {|r| joins(:reasons).where("examples_reasons.reason_id = ?", r)}
   scope :approved, where(:approved => true)
 
-  attr_accessible :excerpt, :headline, :link, :reasons, :reason_ids
+  attr_accessible :excerpt, :headline, :link, :reasons, :reason_ids, :published_at
   has_and_belongs_to_many :reasons
 
   validates_presence_of :headline

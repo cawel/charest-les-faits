@@ -5,4 +5,8 @@
     %label{:class => 'control-label'} Approuvé
     .controls
       = check_box(:example, :approved)
+  .control-group
+    %label{:class => 'control-label'} Publié le
+    .controls
+      = f.date_select :published_at, :order => [:day, :month, :year], :include_blank => true, :start_year => 2000, :end_year => 2013
   = render :partial => "/examples/form", :locals => {:f => f}
