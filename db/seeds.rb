@@ -29,6 +29,10 @@ FactoryGirl.create(:example, :headline => "Charest veut avoir droit de regard su
 
 FactoryGirl.create(:example, :headline => "Le gouvernement exploite la procédure du bâillon pour passer plusieurs lois importantes.", :excerpt => "Doit-on s'alarmer de voir le gouvernement Charest imposer le bâillon pour permettre l'adoption de ses projets de loi? On pourrait se contenter de hausser les épaules tellement le recours à cette mesure est chose quasi routinière à Québec. Pourtant, il y a lieu de s'inquiéter, car, encore une fois, les projets les plus importants du gouvernement seront adoptés à toute vapeur, sans examen et débat en profondeur.", :link => "http://www.ledevoir.com/non-classe/43006/plus-ca-change", :approved => true, :reasons => [r6], :published_at => Date.civil(2003, 12, 16))
 
+FactoryGirl.create(:example, :headline => "Jean Charest choisit de faire campagne durant les vacances d'été", :excerpt => "L'essentiel de la campagne se déroulera dans une période où la politique ne préoccupe guère la population, une perspective rassurante pour un gouvernement qui n'a pas envie de faire campagne sur un bilan de neuf ans.", :link => "http://www.lapresse.ca/actualites/quebec-canada/politique-quebecoise/201207/10/01-4542539-elections-aux-urnes-le-4-septembre.php", :approved => true, :reasons => [r6], :published_at => Date.civil(2012, 07, 11))
+
 Admin.delete_all
 FactoryGirl.create(:admin, :email => 'cawel00@charest-la-honte.com', :password => "youhavelostcontrol")
 FactoryGirl.create(:admin, :email => 'matthieutc@charest-la-honte.com', :password => "youhavelostcontrol")
+
+puts "DB is now seeded."
