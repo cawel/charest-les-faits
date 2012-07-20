@@ -10,17 +10,17 @@ h3 {font-size:20px;}
 body {background-color:#eee !important;}
 p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;}
 .controls select {width:auto;}
-.headline {font-family:IM Fell English SC, Serif; color:red; font-size:320%; margin:0 0 1em 0; line-height:1.2em;}
+.headline {font-family:IM Fell English SC, Serif; color:red; font-size:320%; margin:0 0 1em 0; line-height:1em;}
 .excerpt {position:relative; font-size:18px; line-height:1.3em; white-space:pre-wrap;}
-.container h1, .container h2 {margin:1em 0 0.2em 0;}
-.header-container {margin: auto; background:#ddd url('/assets/charest.png') no-repeat 980px -20px; padding:2em 0em 4em 0em; height:10em;}
+.container h1, .container h2 {margin:2em 0 0.2em 0;}
+.header-container {margin: auto; background:#ddd url('/assets/charest.png') no-repeat 1100px -30px; padding:0.8em 0em 4em 0em; height:10em;}
 .header h1 a {font-family: IM Fell English SC, Serif; font-size:46px; color:black; text-decoration:none}
-.header ul {list-style-type:none; margin:2em 0 0 0; padding:0; width:600px; }
+.header ul {list-style-type:none; margin:2em 0 0 0; padding:0; width:680px; }
 .header ul li {float:left; margin-top:7px; margin-right:7px; font-size: 120%}
 .header ul li a {color:black;background-color:white; padding:0.1em 0.3em; display:block;}
 .header ul li a:hover {color: white; text-decoration:none; background-color: #d00; border-color: #d00; color: white; }
 .header ul li.current a {background-color:#d00; color:white; border-color:#d00;}
-.ribbon {border-width: 3px 0 0 0; border-color:#333; border-style:solid; background-color:white; padding-bottom:4em;}
+.ribbon {border-width: 1px 0 0 0; border-color:#aaa; border-style:solid; background-color:white; padding-bottom:4em;}
 .ribbon {box-shadow: 0 3px 5px #333; background-color:white; }
 
 .quotation-marks {position:absolute; left:-60px; top:32px; font-size:700%; color:#aaa; font-family:Georgia;}
