@@ -14,4 +14,8 @@ module ApplicationHelper
     no_slashes = no_http.sub(/\/.*/, '')
   end
 
+  def analytics_tracking_code
+    ENV['ANALYTICS_TRACKING_CODE']
+  end
+
 end
