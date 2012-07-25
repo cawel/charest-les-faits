@@ -1,6 +1,6 @@
-- unless notice.blank?
-  %div{:class => "alert alert-succes"} 
-    = notice
-- unless alert.blank?
-  %div{:class => "alert alert-error"} 
-    = alert
+- unless flash[:notice].blank?
+  .alert.alert-succes
+    = flash[:notice]
+- unless flash[:alert].blank?
+  .alert.alert-error
+    = flash[:alert]

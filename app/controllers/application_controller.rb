@@ -23,6 +23,12 @@ class ApplicationController < ActionController::Base
     self.next
   end
 
+  def not_found
+    flash[:notice] = "Nous n'avons pas trouvé la page que vous cherchez. Voici notre page d'accueil."
+    puts "set the notice"
+    self.index
+  end
+
   def index
     self.clear_by_reason
   end

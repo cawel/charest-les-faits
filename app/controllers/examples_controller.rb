@@ -7,9 +7,13 @@ class ExamplesController < ApplicationController
   end
 
   def show
-    @example = Example.find(params[:id])
-    history << @example.id if history.empty?
-    @title = @example.headline
+    @example = Example.find_by_id(params[:id])
+    if @example.nil?
+      redirect_to not_found_url 
+    else
+      history << @example.id if history.empty?
+      @title = @example.headline
+    end
   end
 
   def new
