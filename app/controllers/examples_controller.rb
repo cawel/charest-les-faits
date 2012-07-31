@@ -24,7 +24,7 @@ class ExamplesController < ApplicationController
     @example = Example.new(params[:example])
 
     if @example.save
-      redirect_to create_confirm_url, notice: 'Merci pour votre soumission. Elle sera approuvée sous peu.'
+      redirect_to create_confirm_url
     else
       render action: "new"
     end
