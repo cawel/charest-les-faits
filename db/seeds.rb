@@ -34,7 +34,8 @@ FactoryGirl.create(:example, :headline => "Jean Charest choisit de faire campagn
 FactoryGirl.create(:example, :headline => "Les Libéraux ont fermé la division Pétrole et gaz d'Hydro-Québec et ont cédé au secteur privé l'ensemble des permis d'exploration gazière et pétrolière.", :excerpt => "Avant de céder au secteur privé l'ensemble des permis d'exploration gazière et pétrolière qu'elle possédait, Hydro-Québec prévoyait investir plus de 330 millions de dollars entre 2002 et 2010 afin d'évaluer le potentiel en énergies fossiles du sous-sol québécois et du golfe du Saint-Laurent. Les libéraux ont toutefois mis fin aux activités de la division Pétrole et gaz de la Société d'État, un choix qui revient à avoir bradé les ressources en hydrocarbures du Québec, dénonce l'opposition.", :link => "http://www.ledevoir.com/politique/quebec/316842/hydro-voulait-continuer-a-explorer", :approved => true, :reasons => [r5], :published_at => Date.civil(2011, 02, 15))
 
 Admin.delete_all
-FactoryGirl.create(:admin, :email => 'cawel00@charest-la-honte.com', :password => "youhavelostcontrol")
-FactoryGirl.create(:admin, :email => 'matthieutc@charest-la-honte.com', :password => "youhavelostcontrol")
+raise "specify admin password as an environment variable" if ENV['ADMIN_PASSWORD'].blank? 
+FactoryGirl.create(:admin, :email => 'cawel00@charest-les-faits.com', :password => ENV['ADMIN_PASSWORD'])
+FactoryGirl.create(:admin, :email => 'matthieutc@charest-les-faits.com', :password => ENV['ADMIN_PASSWORD'])
 
 puts "DB is now seeded."
