@@ -1,4 +1,4 @@
-%h1 À propos de Charest-les-faits.com
+%h1 À propos de charest-les-faits.com
 %ul{:class => 'content-list'}
   %li Ce site web est né de la frustration d'avoir à notre tête un gouvernement qui ne travaille pas pour l'ensemble des Québécois, mais plutôt pour certains acteurs privilégiés.
 
@@ -10,10 +10,8 @@
 %ul{:class => 'content-list'}
   %li Nous sommes deux frères qui travaillent en informatique lorsque nous ne nous mêlons pas de politique.
   %li Nous ne sommes pas affiliés à un parti politique.
-  %li 
-    Vous pouvez 
-    = mail_to "info@charest-les-faits.com", "nous contacter ici", :encode => "javascript"
-    \.
+  %li
+    != "Vous pouvez #{mail_to "info@charest-les-faits.com", "nous contacter ici", :encode => "javascript"}."
 
 %h1 Attributions
 %ul{:class => 'content-list'}
