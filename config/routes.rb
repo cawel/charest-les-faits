@@ -14,11 +14,11 @@ CharestLaHonte::Application.routes.draw do
   end
 
   match 'a-propos' => 'application#about', :as => 'about'
-  match 'se-debarrasser-de-la-honte' => 'application#good_riddance', :as => 'good_riddance'
+  match 'remplacer-les-liberaux' => 'application#good_riddance', :as => 'good_riddance'
   match 'en-avant' => 'application#next', :as => 'next'
   match 'raisons' => 'application#reasons', :as => 'reasons'
-  match 'filtrer-par-raison/:id' => 'application#by_reason', :as => 'by_reason'
-  match 'voir-toutes-les-raisons' => 'application#clear_by_reason', :as => 'clear_by_reason'
+  match 'categorie/:id' => 'application#by_reason', :as => 'by_reason'
+  match 'toutes-les-categories' => 'application#clear_by_reason', :as => 'clear_by_reason'
   match '/feed' => 'examples#feed', :as => :feed, :defaults => { :format => 'atom' }
 
   root :to => 'application#index'

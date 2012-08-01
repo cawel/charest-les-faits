@@ -17,13 +17,11 @@
   %li
     != "Vous pouvez #{mail_to "info@charest-les-faits.com", "nous contacter ici", :encode => "javascript"}."
 
-%h1 Attributions et Remerciements
+%h1 Attributions et remerciements
 %ul{:class => 'content-list'}
   %li 
     Nous remercions 
     = link_to "Marc Pageau", "http://www11.brinkster.com/marcpageau/" 
     pour nous avoir donné le droit d'utiliser une de ses caricatures de Jean Charest.
-  %li<
-    Nous remercions Geneviève L'Obstineuse qui est à l'origine du site web 
-    = link_to "liberaux.net", "http://liberaux.net"
-    = ", qui nous a beaucoup inspiré."
+  %li
+    != "Nous remercions Geneviève L'Obstineuse qui est à l'origine du site web #{link_to "liberaux.net", "http://liberaux.net"} qui nous a beaucoup inspiré."
