@@ -9,6 +9,7 @@ table tbody tr td {border-bottom:1px solid #bbb;}
 h3 {font-size:20px;}
 body {background-color:#eee !important;}
 p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;}
+span.highlight{background-color: #ff9;}
 ul.content-list li {list-style-type: square;}
 .controls select {width:auto;}
 .headline {font-family:IM Fell English SC, Serif; color:red; font-size:320%; margin:0 0 1em 0; line-height:1em;}
