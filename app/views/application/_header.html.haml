@@ -4,7 +4,7 @@
       .span10
         .header
           %h1= link_to 'Charest : les faits', root_url
-          %h3 Neuf ans, c'est assez. Voici les faits.
+          %h3 Neuf ans c'est assez. Voici les faits.
 
           %ul
             = render :partial => 'reason_tag', :locals => {:reason => nil, :label => "Tous les exemples", :count => Example.approved.size, :path => root_path}
