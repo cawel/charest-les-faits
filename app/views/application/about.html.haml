@@ -11,7 +11,9 @@
   %li Nous sommes deux frères qui travaillent en informatique lorsque nous ne nous mêlons pas de politique.
   %li Nous ne sommes pas affiliés à un parti politique.
   %li 
-    Vous pouvez <a href="mailto:info@charest-les-faits.com">nous contacter ici</a>.
+    Vous pouvez 
+    = mail_to "info@charest-les-faits.com", "nous contacter ici", :encode => "javascript"
+    \.
 
 %h1 Attributions
 %ul{:class => 'content-list'}
