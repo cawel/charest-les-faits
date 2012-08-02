@@ -3,13 +3,13 @@
   %head
     %title= @title.nil? ? "Charest — les faits" : "Charest — les faits: #{@title}"
     = render "analytics"
+    <link rel="image_src" href="/assets/charest.png">
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
   = csrf_meta_tags
   <link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
   <link href="/favicon.ico" rel="icon" type="image/x-icon">
-  <link rel="image_src" href="/assets/charest.png">
 
 %body
   = render "facebook_setup"
