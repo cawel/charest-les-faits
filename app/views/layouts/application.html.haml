@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title= @title.nil? ? "Charest — les faits" : "Charest — les faits: #{@title}"
+    %title= @title.blank? ? "Charest — les faits" : @title
     = render "analytics"
     <link rel="image_src" href="/assets/charest.png">
   = stylesheet_link_tag    "application", :media => "all"
