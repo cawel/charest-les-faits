@@ -45,7 +45,7 @@ FactoryGirl.create(:example, :headline => "Dans son rapport, le vÃ©rificateur gÃ
 
 Admin.delete_all
 raise "specify admin password as an environment variable" if ENV['ADMIN_PASSWORD'].blank? 
-FactoryGirl.create(:admin, :email => 'cawel00@charest-les-faits.com', :password => ENV['ADMIN_PASSWORD'])
+FactoryGirl.create(:admin, :email => 'cawel@charest-les-faits.com', :password => ENV['ADMIN_PASSWORD'])
 FactoryGirl.create(:admin, :email => 'matthieutc@charest-les-faits.com', :password => ENV['ADMIN_PASSWORD'])
 
 puts "DB is now seeded."
