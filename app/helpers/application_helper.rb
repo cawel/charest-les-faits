@@ -18,4 +18,8 @@ module ApplicationHelper
     ENV['ANALYTICS_TRACKING_CODE']
   end
 
+  def current_url
+    "http://#{request.host}#{request.fullpath}"
+  end
+
 end
