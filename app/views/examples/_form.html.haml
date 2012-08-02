@@ -18,7 +18,7 @@
     = f.input_field :link, :required => :required
 
 .control-group
-  = f.label :reasons, 'Raisons de la honte', :class => "control-label"
+  = f.label :reasons, 'Catégories', :class => "control-label"
   .controls
     = f.collection_check_boxes :reason_ids, Reason.all, :id, lambda {|r| r.label}
 
