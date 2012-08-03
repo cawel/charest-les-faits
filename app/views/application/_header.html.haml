@@ -3,8 +3,8 @@
     .row
       .span10
         .header
-          %h1= link_to 'Charest : les faits', root_url
-          %h3 Neuf ans c'est assez. Voici les faits.
+          %h1= link_to 'Charest - les faits !', root_url
+          %h3 Je me souviens. Voici les faits.
 
           %ul
             = render :partial => 'reason_tag', :locals => {:reason => nil, :label => "Tous les faits", :count => Example.approved.size, :path => root_path}
