@@ -1,6 +1,8 @@
 /*
  *= require_self
- *= require_tree .
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require scaffolds
  */
 table thead tr th {background-color:#bbb;}
 table tbody tr td {border-bottom:1px solid #bbb;}
