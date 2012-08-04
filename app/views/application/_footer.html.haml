@@ -1,24 +1,21 @@
 .footer
   .container
     .row 
-      .span4
+      .span3
         %ul{:class => "nav nav-list"}
           %li{:class => "nav-header"}
             Agir
           %li= link_to "soumettre un fait", new_example_path
           %li= link_to "remplacer les Libéraux", good_riddance_path
-      .span4
+      .span3
         %ul{:class => "nav nav-list"}
           %li{:class => "nav-header "}
             Contenu
-          %li= link_to "accueil", root_url
           %li= link_to "à propos", about_path
           %li= link_to "RSS", feed_path
-      .span4
+      .span6
         %ul{:class => "nav nav-list"}
           %li{:class => "nav-header "}
             Partager
-          / %li
-          / Plus de 2000 visiteurs !
           %li
             = render 'facebook_like_full'

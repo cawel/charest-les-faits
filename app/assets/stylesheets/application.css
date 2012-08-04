@@ -61,15 +61,17 @@ input.btn, button.btn, .control-label, .collection_check_boxes {font-size:140%;}
 .control-group .controls span label {display:inline; margin-left:1em;}
 .example-info label {font-weight:bold; display:inline-block; width:12em; font-size:110%;}
 .example-info .section {float:left; font-size:18px;}
-.social-buttons {float:right;}
 .example-info {margin:2em 0 3em 0;}
 .twitter-button {display:inline; position:relative; top:2px;}
 .down-from-card {font-size:300%; text-align:center; padding-top:1em;}
 
+.social-buttons {float:right;}
 .source-data {margin-left: 10px}
 
-/* clearfix */
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; } 
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
+@media (max-width: 480px) {
+  .headline, .header h1 a {font-size:28px;}
+}
+@media (max-width: 979px) {
+  .social-buttons {float:none; margin-top:1em;}
+  .example-info .section {float:none;}
+}

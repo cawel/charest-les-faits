@@ -11,18 +11,17 @@
             .quotation-marks= "“"
             = @example.excerpt
 
-          .row
-            .span10
-              .example-info
-                .section
-                  - timestamp = @example.published_at.nil? ? "" : " le #{I18n.l(@example.published_at, :format => "%-1d %B %Y")}"
-                  Source :
-                  = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
-                  = timestamp
+          .example-info
+            .section
+              - timestamp = @example.published_at.nil? ? "" : " le #{I18n.l(@example.published_at, :format => "%-1d %B %Y")}"
+              Source :
+              = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
+              = timestamp
 
-                .social-buttons
-                  = render :partial => 'facebook_button'
-                  = render :partial => 'twitter_button'
+            .social-buttons
+              = render :partial => 'facebook_button'
+            .social-buttons
+              = render :partial => 'twitter_button'
 
   .span2
     .right-of-card.hidden-phone
@@ -30,5 +29,5 @@
         = image_tag("ff.png", :class => "ff")
     .down-from-card.visible-phone
       %a{:href => next_path, :alt => 'Un autre fait', :title => 'Un autre exemple'}
-        voir un autre fait >>
+        suivant >>
 
