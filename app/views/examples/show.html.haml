@@ -25,6 +25,10 @@
                   = render :partial => 'twitter_button'
 
   .span2
-    .right-of-card
-      %a{:href => next_path, :alt => 'Un autre exemple', :title => 'Un autre exemple', :class => 'next-button'}
+    .right-of-card.hidden-phone
+      %a{:href => next_path, :alt => 'Un autre fait', :title => 'Un autre exemple', :class => 'next-button'}
         = image_tag("ff.png", :class => "ff")
+    .down-from-card.visible-phone
+      %a{:href => next_path, :alt => 'Un autre fait', :title => 'Un autre exemple'}
+        voir un autre fait >>
+
