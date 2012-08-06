@@ -38,5 +38,12 @@
   %li
     != "#{link_to "Soumettez des exemples", new_example_path} qui démontrent que nous ne pouvons plus faire confiance au gouvernement Charest."
   %li
-    Visitez-nous sur Facebook:
+    Suivez-nous sur
+    = link_to "Twitter", "http://twitter.com/charestLesFaits"
+    !
+  %li
+    Visitez-nous sur
+    = link_to "Facebook", "http://www.facebook.com/charest.les.faits"
+    !
   = render 'facebook_like_full'
+
