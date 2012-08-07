@@ -40,8 +40,6 @@ class Admin::SharesController < AdminController
     fb_url = "http://graph.facebook.com/?ids=" + url
     uri = URI.parse(fb_url)
     response = Net::HTTP.get_response uri
-    puts response.inspect
-    puts response.body.inspect
 
     shares = 0
     begin
