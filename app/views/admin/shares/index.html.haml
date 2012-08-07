@@ -1,0 +1,18 @@
+= link_to "forcer la mise à jour", admin_trigger_fetch_url
+%table{:class => "table-striped table-condensed"}
+  %thead
+    %tr
+      %th ID
+      %th FB
+      %th Twitter
+      %th Sum
+      %th Fait
+
+  %tbody
+    - @examples.each do |example|
+      %tr
+        %td= example.id
+        %td= example.facebook_shares
+        %td= example.twitter_shares
+        %td= example.facebook_shares + example.twitter_shares
+        %td= link_to(truncate(example.headline, length: 70), example_url(example))

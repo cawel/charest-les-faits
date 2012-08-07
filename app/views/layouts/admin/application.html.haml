@@ -21,6 +21,8 @@
       %li
         = link_to "Site public", root_url
       %li
+        = link_to "Top", admin_shares_url
+      %li
         = link_to "Se déconnecter", destroy_session_url(current_admin), :method => :delete
 
     = render "flash_messages"

@@ -1,0 +1,9 @@
+%h1 
+  Top 10 (les plus partagés)
+.row
+  .span12
+    %ol
+      - @examples.each do |e|
+        %li 
+          = link_to(truncate(e.headline, length: 80), example_url(e))
+          = "(#{e.facebook_shares + e.twitter_shares} partages)"

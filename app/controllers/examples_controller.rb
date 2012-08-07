@@ -33,6 +33,10 @@ class ExamplesController < ApplicationController
   def create_confirm
   end
 
+  def top
+    @examples = Example.all.sort{|x,y| compare(x,y) }.slice(0...10)
+  end
+
   def feed
     @title = "La honte a un visage"
     @items = Example.approved.order('updated_at desc').all
@@ -41,6 +45,18 @@ class ExamplesController < ApplicationController
     respond_to do |format|
       format.atom { render :layout => false }
       format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
+    end
+  end
+
+  def compare x, y
+    shares_x = x.facebook_shares + x.twitter_shares
+    shares_y = y.facebook_shares + y.twitter_shares
+    if shares_x < shares_y
+      1
+    elsif shares_x > shares_y
+      -1
+    else
+      0
     end
   end
 

@@ -1,6 +1,7 @@
 CharestLaHonte::Application.routes.draw do
 
   match 'exemples/confirmation' => 'examples#create_confirm', :as => :create_confirm
+  match 'exemples/top-10-les-plus-partages' => 'examples#top', :as => :top
   resources :examples, :only => [:new, :create, :show],
     :path => "exemples",
     :path_names => { :new => 'nouveau' } 
@@ -9,6 +10,8 @@ CharestLaHonte::Application.routes.draw do
 
   match 'admin' => 'admin::examples#index'
   namespace :admin do
+    match 'shares/index' => 'shares#index', :as => :shares
+    match 'shares/trigger_fetch' => 'shares#trigger_fetch', :as => :trigger_fetch
     resources :examples
     resources :reasons
   end
