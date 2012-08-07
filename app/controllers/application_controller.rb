@@ -25,7 +25,6 @@ class ApplicationController < ActionController::Base
 
   def not_found
     flash[:notice] = "Nous n'avons pas trouvé la page que vous cherchez. Voici notre page d'accueil."
-    puts "set the notice"
     self.index
   end
 
