@@ -3,7 +3,7 @@ CharestLaHonte::Application.routes.draw do
   match 'exemples/confirmation' => 'examples#create_confirm', :as => :create_confirm
   match 'exemples/top-10-les-plus-partages' => 'examples#top', :as => :top
 
-  resources :posts, :path => 'blog', :only => [:show]
+  resources :posts, :path => 'blog', :only => [:show, :index]
 
   resources :examples, :only => [:new, :create, :show],
     :path => "exemples",
