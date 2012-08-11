@@ -35,6 +35,7 @@ class ExamplesController < ApplicationController
 
   def top
     @examples = Example.all.sort{|x,y| compare(x,y) }.slice(0...10)
+    @title = "Top 10 les plus partagés"
   end
 
   def feed
