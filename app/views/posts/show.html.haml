@@ -1,5 +1,6 @@
 .blogpost
   %h2!= @post.title
+  .timestamp= format_date(@post.created_at)
   .body
     != @post.content
 
@@ -12,11 +13,9 @@
             = link_to post.title, post_path(post)
             = " le #{format_date post.created_at}"
 
-%div{:id => "disqus_thread"}
-:javascript
-    var disqus_shortname = 'charest-les-faits';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+%script
+  var idcomments_acct = 'f7e37db087805968d1ab6cc4a306aa78';
+  var idcomments_post_id;
+  var idcomments_post_url;
+%span{:id => "IDCommentsPostTitle", :style => "display:none"}
+!= "<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>"
