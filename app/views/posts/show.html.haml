@@ -4,6 +4,11 @@
   .body
     != @post.content
 
+  .social-buttons
+    = render :partial => 'examples/facebook_button'
+  .social-buttons
+    = render :partial => 'examples/twitter_button'
+
   .links
     - if Post.all.count > 1
       %h2 Autres billets
