@@ -1,0 +1,23 @@
+%table{:class => "table-striped table-condensed"}
+  %thead
+    %tr
+      %th Titre
+      %th Permlink
+      %th Contenu
+      %th
+      %th
+
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= truncate(post.title, length: 100)
+        %td= post.permlink
+        %td= truncate(post.content, length: 200)
+        %td= link_to 'Afficher', post
+        %td(white-space="nowrap" nowrap="true")
+          = link_to image_tag('icons/pencil.png'), edit_admin_post_path(post)
+          = link_to image_tag('icons/cross.png'), admin_post_path(post), :method => :delete, :confirm => "Etes-vous certain?"
+
+%br
+
+%p= link_to 'Écrire un nouveau billet', new_admin_post_path

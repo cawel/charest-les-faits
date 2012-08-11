@@ -13,7 +13,7 @@
 
           .example-info
             .section
-              - timestamp = @example.published_at.nil? ? "" : " le #{I18n.l(@example.published_at, :format => "%-1d %B %Y")}"
+              - timestamp = @example.published_at.nil? ? "" : " le #{format_date(@example.published_at)}"
               Source :
               = link_to(extract_website(@example.link), @example.link, {:class => 'external source-data', :target => '_blank'})
               = timestamp

@@ -10,7 +10,7 @@ table tbody tr td {border-bottom:1px solid #bbb;}
 *, div, p, td, li, body {font-family: Marmelad, Ubuntu, Verdana, sans-serif;}
 h3 {font-size:20px;}
 body {background-color:#eee !important;}
-p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;}
+.blogpost, p, li, td, th, .nav li.nav-header {font-size:18px; line-height:1.7em !important;}
 span.highlight{background-color: #ff9;}
 ul.content-list li {list-style-type: square;}
 .controls select {width:auto;}
@@ -48,7 +48,7 @@ h1.new-example {margin-left:220px;}
 .footer {padding:1em;}
 .fb-iframe{margin-top: 10px;}
 
-.controls textarea, .controls input#example_headline, .controls input#example_link {width:40em;}
+.controls textarea, .controls input#example_headline, .controls input#example_link, #post_content, #post_title {width:40em;}
 .controls * {vertical-align:middle;}
 
 input.btn, button.btn, .control-label, .collection_check_boxes {font-size:140%;}
@@ -67,6 +67,8 @@ input.btn, button.btn, .control-label, .collection_check_boxes {font-size:140%;}
 
 .social-buttons {float:right;}
 .source-data {margin-left: 10px}
+
+.blogpost {margin-bottom:5em; margin-top:3em;}
 
 @media (max-width: 480px) {
   .headline, .header h1 a {font-size:28px;}

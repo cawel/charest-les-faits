@@ -22,4 +22,8 @@ module ApplicationHelper
     "http://#{request.host}#{request.fullpath}"
   end
 
+  def format_date date
+    I18n.l(date, :format => "%-1d %B %Y")
+  end
+
 end
