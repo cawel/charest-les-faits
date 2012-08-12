@@ -69,8 +69,13 @@ input.btn, button.btn, .control-label, .collection_check_boxes {font-size:140%;}
 .source-data {margin-left: 10px}
 
 .blogpost {margin-bottom:5em; margin-top:3em;}
-.blogpost .timestamp {color: #666; font-size:90%; border-bottom:1px solid #ccc;}
+.blogpost .timestamp {color: #666; font-size:90%;}
 .blogpost .body {margin-top:2em;}
+.blogpost .timestamp { border-bottom:1px solid #ccc;}
+.blogpost div.img {text-align:center; margin: 2em 0; color:#666;}
+.blogpost div.img p {font-size:90% !important; margin-top:1em;}
+.blogpost div.img img {margin: 0 auto;}
+.blogpost p {margin-bottom:1.5em;}
 
 @media (max-width: 480px) {
   .headline, .header h1 a {font-size:28px;}
