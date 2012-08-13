@@ -7,7 +7,7 @@
           %h3 Je me souviens. Voici les faits.
 
           %ul
-            = render :partial => 'reason_tag', :locals => {:reason => nil, :label => "Tous les faits", :count => Example.approved.size, :path => root_path}
+            = render :partial => 'reason_tag', :locals => {:reason => nil, :label => "Tous les faits", :count => Example.approved.size, :path => clear_by_reason_path}
 
             - Reason.all.each do |reason|
               - next if Example.approved.for_reason(reason).count == 0

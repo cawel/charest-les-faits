@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
   protect_from_forgery
 
+  def welcome
+  end
+
   def reasons
     all_examples = Example.all
     @reasons_with_count = Reason.all.map {|r| [r, all_examples.select{|e| e.reasons.include? r}.size] }

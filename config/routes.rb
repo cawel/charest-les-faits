@@ -28,7 +28,8 @@ CharestLaHonte::Application.routes.draw do
   match 'toutes-les-categories' => 'application#clear_by_reason', :as => 'clear_by_reason'
   match '/feed' => 'examples#feed', :as => :feed, :defaults => { :format => 'atom' }
 
-  root :to => 'application#index'
+  root :to => 'application#welcome'
+  root :to => 'application#index', :as => :fact_picker
 
   match '*path' => 'application#not_found'
   match '/not_found' => 'application#not_found', :as => 'not_found'
