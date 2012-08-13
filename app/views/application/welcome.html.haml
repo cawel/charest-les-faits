@@ -1,18 +1,29 @@
-%h2 Objectifs:
-%ul{:class => 'content-list'}
-  %li<
-    Faire connaître 
-    = link_to "les faits", clear_by_reason_url
-    sur le gouvernement Charest. 
-  %li<
-    Contribuer à la défaite des Libéraux le 4 septembre.
+.welcome-step
+  %h2 L'obectif
+  %ul{:class => 'content-list'}
+    %li<
+      Faire connaître 
+      = link_to "les faits", clear_by_reason_url
+      sur le gouvernement Charest. 
+    %li<
+      Contribuer à la défaite des Libéraux le 4 septembre.
+  .step-number 1
 
-%h2 Stratégie:
-%ul{:class => 'content-list'}
-  %li<
-    Faire sortir le vote. Surtout celui des jeunes.
-  %li<
-    Encourager à voter stratégiquement dans les circonscriptions chaudes.
-  %li<
-    Revendiquer un mode de scrutin avec beaucoup plus de proportionnalité.
+.welcome-step
+  %h2 La stratégie
+  %ul{:class => 'content-list'}
+    %li<
+      Faire sortir le vote. Surtout celui des jeunes.
+    %li<
+      Encourager à voter stratégiquement dans les circonscriptions chaudes.
+    %li<
+      Revendiquer un mode de scrutin avec beaucoup plus de proportionnalité.
+  .step-number 2
 
+.welcome-step
+  %h2 Je suis prêt
+  %p{:class => 'welcome-go-button'}
+    %a{:href => next_path, :alt => 'Un autre fait', :title => 'Un autre exemple'}
+      Montre-moi des faits >>
+
+  .step-number 3

@@ -77,6 +77,12 @@ input.btn, button.btn, .control-label, .collection_check_boxes {font-size:140%;}
 .blogpost div.img img {margin: 0 auto;}
 .blogpost p {margin-bottom:1.5em;}
 
+.welcome-go-button {font-size:200%;}
+
+.welcome-step {position:relative; }
+.welcome-step * {position:relative; z-index:2;}
+.step-number {position:absolute; left:-50px; top:10px; font-size:600%; color:#ccc; font-family:Georgia; z-index:1;}
+
 @media (max-width: 480px) {
   .headline, .header h1 a {font-size:28px;}
 }
