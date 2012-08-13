@@ -5,7 +5,7 @@ Vers un meilleur débat sur le vote stratégique pour #QC2012
 <p>La campagne électorale fait rage depuis deux semaines et plusieurs électeurs sont frustrés après avoir passé neuf ans sous le gouvernement Charest. Les citoyens plus progressistes s'entendent pour dire que l'objectif numéro un de cette élection est de remplacer les Libéraux. Mais la manière d'y arriver n'est pas claire. Le manque de satisfaction général sous les Libéraux, les différentes idées sur la souveraineté, et la division sur l'axe gauche/droite ont donné vie à plusieurs partis qui se présentent comme une alternative aux "vieux partis". Sauf que dans la plupart des cas, voter pour un des petits nouveaux se résume souvent à laisser les autres électeurs décider <span class="highlight">lequel des deux plus gros partis remportera</span> les élections.</p>
 
 
-<div class="img"><a href="http://www.henaff-bagnolet.ac-creteil.fr/IMG/arton293.jpg?1317834192"><img src="http://www.henaff-bagnolet.ac-creteil.fr/IMG/arton293.jpg?1317834192"></a><p>Votons !</p></div>
+<div class="img"><a href="http://www.henaff-bagnolet.ac-creteil.fr/IMG/arton293.jpg?1317834192"><img src="http://www.henaff-bagnolet.ac-creteil.fr/IMG/arton293.jpg?1317834192"></a><p>L'Hôtel du Parlement</p></div>
 
 <h3>Notre mode de scrutin</h3>
 
